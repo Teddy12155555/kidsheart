@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Main from "./Main";
 import * as serviceWorker from "./serviceWorker";
-
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 ReactDOM.render(
