@@ -46,9 +46,9 @@ export default function Navbar(props) {
               服務項目
             </button>
             <div class="dropdown-content">
-              <a href="#">孩童評量</a>
-              <a href="#">優師培訓</a>
-              <a href="#">課程探索</a>
+              <a href="./evaluation">孩童評量</a>
+              <a href="./teachers">優師培訓</a>
+              <a href="./courses">課程探索</a>
             </div>
           </div>
         </div>
@@ -60,14 +60,14 @@ export default function Navbar(props) {
               關於我們
             </button>
             <div class="dropdown-content">
-              <a href="#">品牌故事</a>
-              <a href="#">聯絡方式</a>
+              <a href="./about">品牌故事</a>
+              <a href="./contact">聯絡方式</a>
             </div>
           </div>
         </div>
 
         <li className="nav-head-img">
-          <a href="./">
+          <a href="./home">
             <img src={require("../assets/Image/logo.png")}></img>
           </a>
         </li>
