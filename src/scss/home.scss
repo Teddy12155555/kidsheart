@@ -1,12 +1,16 @@
-.homePage {
-  height: 105vh;
-  background-color: #78b8ce;
+$SlideHeight: 100px;
 
+.homePage {
+  // height: 105vh;
+  background-color: #78b8ce;
+  overflow: auto;
   .slide-container {
-    position: absolute;
-    top: 100px;
-    left: 15px;
-    width: 50vw;
+    position: relative;
+    float: left;
+    margin-top: $SlideHeight;
+    margin-left: 15px;
+    // left: 15px;
+    width: 55vw;
     border: solid;
     border-width: 5px;
     border-color: rgb(117, 115, 110);
@@ -42,4 +46,36 @@
       }
     }
   }
+
+  .slogan {
+    width: 30vw;
+    float: left;
+    margin-top: $SlideHeight + 20px;
+    margin-left: 50px;
+    font-size: 20px;
+    color: white;
+    msg {
+      display: block;
+      font-weight: bold;
+      &#title1 {
+        font-size: 220%;
+      }
+      &#title2 {
+        font-size: 280%;
+      }
+      &#desc {
+        margin-top: 30px;
+        font-size: 120%;
+      }
+    }
+  }
+
+  // msg#1.2 {
+  // }
+
+  // msg#1.2 {
+  // }
+
+  // msg#2 {
+  // }
 }

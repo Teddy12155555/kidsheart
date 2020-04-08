@@ -34,6 +34,13 @@ export default function HomePage(props) {
           })}
         </Slide>
       </div>
+      <div className="slogan">
+        <msg id="title1">Welcome</msg>
+        <msg id="title2">孩子成長最安心的依靠</msg>
+        <msg id="desc">
+          童心匯 - "讓飛魚飛" 致力給孩童最好的陪伴，成為啟發心靈的助手
+        </msg>
+      </div>
     </div>
   );
 }
