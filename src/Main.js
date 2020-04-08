@@ -11,6 +11,7 @@ import About from "./components/About";
 import Teachers from "./components/Teacers";
 import Evaluation from "./components/Evaluation";
 import Courses from "./components/Courses";
+import "./main.scss";
 
 function Main() {
   return (
@@ -23,7 +24,7 @@ function Main() {
         <Route path="/teachers" component={Teachers} />
         <Route path="/evaluation" component={Evaluation} />
         <Route path="/courses" component={Courses} />
-        <Redirect from="/" to="/home" />
+        <Redirect exact from="/" to="/home" />
       </Switch>
       <Footer />
     </div>
