@@ -1,0 +1,80 @@
+.nav {
+  overflow: hidden;
+  background-color: #333;
+}
+.nav ul {
+  height: 80px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.nav .nav-cell {
+  float: right;
+  line-height: 80px;
+  font-size: 15pt;
+}
+.nav .nav-cell a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: fot-matisse-pron, sans-serif;
+  text-decoration: none;
+}
+.nav .nav-cell a:hover {
+  background-color: #111;
+}
+.nav .nav-cell a::after {
+  content: " ";
+  background: black;
+  display: block;
+  width: 120%;
+  height: 0.08rem;
+  margin-top: -0.3rem;
+}
+.nav .nav-cell i {
+  padding-right: 10px;
+}
+.nav .nav-cell .dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: white;
+  padding: 25px;
+  background-color: inherit;
+  font-size: 15pt;
+}
+.nav .nav-cell .dropdown .dropbtn:hover {
+  background-color: #111;
+}
+.nav .nav-cell .dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10%;
+  z-index: 1;
+}
+.nav .nav-cell .dropdown-content a {
+  float: none;
+  color: black;
+  display: block;
+  text-align: left;
+}
+.nav .nav-cell .dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  transform: scale(1.2);
+}
+.nav .nav-cell .dropdown:hover .dropdown-content {
+  display: block;
+}
+.nav .nav-head-img {
+  float: left;
+}
+.nav .nav-head-img img {
+  padding-left: 20px;
+}
+
+/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,45 @@
+.homePage {
+  height: 105vh;
+  background-color: #78b8ce;
+
+  .slide-container {
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    width: 50vw;
+    border: solid;
+    border-width: 5px;
+    border-color: rgb(117, 115, 110);
+
+    .each-slide {
+      > img.photo {
+        display: block;
+        max-width: 100%;
+      }
+    }
+    .nav {
+      background-color: rgb(255, 255, 255);
+      z-index: 1;
+      &[data-type="next"] {
+        transform: translate(50%, 0);
+      }
+      &[data-type="prev"] {
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .indicators {
+      position: absolute;
+      width: 100%;
+      bottom: 7px;
+      margin: 0;
+      > div {
+        margin-bottom: 0px;
+        background-color: #f9f9f9 !important;
+      }
+      > .active {
+        background-color: #ff7878 !important;
+      }
+    }
+  }
+}
