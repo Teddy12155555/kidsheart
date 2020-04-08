@@ -1,6 +1,6 @@
 import React, { useState, Component } from "react";
 import { Slide } from "react-slideshow-image";
-import "../scss/home.scss";
+import "../scss/homepage.scss";
 
 const slideImages = [
   "/assets/Image/slider0.jpg",
@@ -22,7 +22,7 @@ const properties = {
 
 export default function HomePage(props) {
   return (
-    <div className="homePage">
+    <div className="homePage bg-img">
       <div className="slide-container">
         <Slide {...properties}>
           {slideImages.map((v, i) => {

@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Teachers from "./components/Teacers";
+import Teachers from "./components/Teachers";
 import Evaluation from "./components/Evaluation";
 import Courses from "./components/Courses";
 import "./main.scss";

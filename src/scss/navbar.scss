@@ -1,11 +1,12 @@
 @import "variable.scss";
+
 $nav-hieght: 80px;
 $nav-font-size: 15pt;
 $nav-padding: 25px;
 
 .nav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #78b8ce;
   ul {
     height: $nav-hieght;
     list-style-type: none;
@@ -17,6 +18,7 @@ $nav-padding: 25px;
     float: right;
     line-height: $nav-hieght;
     font-size: $nav-font-size;
+    //font-weight: bolder;
     a {
       display: block;
       color: white;
@@ -52,8 +54,9 @@ $nav-padding: 25px;
       padding: $nav-padding;
       background-color: inherit;
       font-size: $nav-font-size;
+      font-weight: bolder;
       &:hover {
-        background-color: #111;
+        transform: scale(1.2);
       }
     }
     .dropdown-content {
