@@ -12,7 +12,12 @@ export default function Navbar(props) {
         </li>
 
         <li className="nav-cell">
-          <a href="news.asp">Search</a>
+          <form className="search" action="">
+            <input type="text" placeholder="Search" name="search" />
+            <button type="submit">
+              <i className="fa fa-search"></i>
+            </button>
+          </form>
         </li>
 
         <div className="nav-cell">
@@ -71,7 +76,7 @@ export default function Navbar(props) {
 
         <li className="nav-head-img">
           <a href="./home">
-            <img src={require("../assets/Image/logo.png")}></img>
+            <img src="/assets/Image/logo.png"></img>
           </a>
         </li>
       </ul>

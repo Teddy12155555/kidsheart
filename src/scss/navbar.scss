@@ -3,7 +3,7 @@
 $nav-hieght: 80px;
 $nav-font-size: 15pt;
 $nav-padding: 25px;
-
+$search-hieght: 3px;
 .navbar {
   overflow: hidden;
   background-color: #78b8ce;
@@ -20,10 +20,52 @@ $nav-padding: 25px;
   line-height: $nav-hieght;
   font-size: $nav-font-size;
 
+  form {
+    width: 130px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 28px;
+
+    .s {
+      width: 100px;
+    }
+  }
+  form.search input[type="text"] {
+    padding: $search-hieght;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 65%;
+    background: white;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+  }
+
+  form.search button {
+    float: right;
+    width: 25%;
+    padding: $search-hieght;
+    //padding-left: 10px;
+    background: white;
+    color: black;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+    &:hover {
+      background: #40a2f1;
+    }
+  }
+  form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
   .en-btn {
     margin-right: 20px;
     border-radius: 100%;
-    padding: 20px;
+    padding: 15px;
     outline: none;
     font-size: 20px;
     color: white;
