@@ -10,6 +10,7 @@ $SlideHeight: 100px;
   height: 100vh;
   background-color: #78b8ce;
   overflow: auto;
+  padding-bottom: 300px;
   .slide-container {
     position: relative;
     float: left;
@@ -60,6 +61,7 @@ $SlideHeight: 100px;
     margin-left: 50px;
     font-size: 20px;
     color: white;
+
     msg {
       display: block;
       font-weight: bold;
@@ -72,6 +74,26 @@ $SlideHeight: 100px;
       &#desc {
         margin-top: 30px;
         font-size: 120%;
+      }
+    }
+
+    .links {
+      float: right;
+      margin-top: 10px;
+      margin-right: 20px;
+      display: inline-block;
+
+      a {
+        display: block;
+        width: 200px;
+        padding: 6px 0px;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 600;
+        margin-top: 25px;
+        color: rgb(5, 6, 6);
+        background-color: #e3feff;
+        border-radius: 100px;
       }
     }
   }
