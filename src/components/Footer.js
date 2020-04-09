@@ -1,5 +1,4 @@
 import React, { useState, Component } from "react";
-
 import "../scss/footer.scss";
 
 export default function Footer(props) {
@@ -7,7 +6,11 @@ export default function Footer(props) {
     <div className="footer">
       <div className="seperator" />
       <div className="container">
-        <div className="icons"></div>
+        <div className="icons">
+          <a href="#" class="fa fa-comment icon" />
+          <a href="#" class="fa fa-envelope icon"></a>
+          <a href="#" class="fa fa-facebook-f icon" />
+        </div>
         <div className="column">
           <div className="title">HOME</div>
           <div className="element">首頁</div>

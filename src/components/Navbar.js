@@ -3,11 +3,14 @@ import "../scss/navbar.scss";
 
 export default function Navbar(props) {
   return (
-    <div className="nav">
+    <div className="navbar">
       <ul>
         <li className="nav-cell">
-          <a href="default.asp">EN</a>
+          <button href="#" className="en-btn">
+            EN
+          </button>
         </li>
+
         <li className="nav-cell">
           <a href="news.asp">Search</a>
         </li>
