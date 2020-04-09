@@ -85,16 +85,14 @@ $nav-padding: 25px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 10%;
     z-index: 1;
-
     a {
       float: none;
       color: black;
-      //text-decoration: none;
       display: block;
       text-align: left;
-
       &:hover {
         background-color: rgba(0, 0, 0, 0);
+        transform: scale(1.2);
       }
     }
   }
