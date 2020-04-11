@@ -41,8 +41,12 @@ export default function HomePage(props) {
           童心匯 - "讓飛魚飛" 致力給孩童最好的陪伴，成為啟發心靈的助手
         </msg>
         <div className="links">
-          <a>看更多介紹</a>
-          <a>前往關於我們</a>
+          <a className="more" href="./working">
+            看更多介紹
+          </a>
+          <a className="toabout" href="./working">
+            前往關於我們
+          </a>
         </div>
       </div>
     </div>

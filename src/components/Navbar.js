@@ -27,9 +27,9 @@ export default function Navbar(props) {
               活動資訊
             </button>
             <div class="dropdown-content">
-              <a href="#">最新開課</a>
-              <a href="#">親職講座</a>
-              <a href="#">公益活動</a>
+              <a href="./working">最新開課</a>
+              <a href="./working">親職講座</a>
+              <a href="./working">公益活動</a>
             </div>
           </div>
         </div>
@@ -41,8 +41,8 @@ export default function Navbar(props) {
               成果展示
             </button>
             <div class="dropdown-content">
-              <a href="#">參與者回饋</a>
-              <a href="#">著作 / 展示</a>
+              <a href="./working">參與者回饋</a>
+              <a href="./working">著作 / 展示</a>
             </div>
           </div>
         </div>
@@ -54,9 +54,9 @@ export default function Navbar(props) {
               服務項目
             </button>
             <div class="dropdown-content">
-              <a href="./evaluation">孩童評量</a>
-              <a href="./teachers">優師培訓</a>
-              <a href="./courses">課程探索</a>
+              <a href="./working">孩童評量</a>
+              <a href="./working">優師培訓</a>
+              <a href="./working">課程探索</a>
             </div>
           </div>
         </div>
@@ -68,8 +68,8 @@ export default function Navbar(props) {
               關於我們
             </button>
             <div class="dropdown-content">
-              <a href="./about">品牌故事</a>
-              <a href="./contact">聯絡方式</a>
+              <a href="./working">品牌故事</a>
+              <a href="./working">聯絡方式</a>
             </div>
           </div>
         </div>

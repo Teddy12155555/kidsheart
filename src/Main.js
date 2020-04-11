@@ -11,6 +11,7 @@ import About from "./components/About";
 import Teachers from "./components/Teachers";
 import Evaluation from "./components/Evaluation";
 import Courses from "./components/Courses";
+import StillWorking from "./components/StillWorking";
 import "./main.scss";
 
 function Main() {
@@ -24,6 +25,7 @@ function Main() {
         <Route path="/teachers" component={Teachers} />
         <Route path="/evaluation" component={Evaluation} />
         <Route path="/courses" component={Courses} />
+        <Route path="/working" component={StillWorking} />
         <Redirect exact from="/" to="/home" />
       </Switch>
       <Footer />
