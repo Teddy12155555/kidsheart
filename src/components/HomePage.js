@@ -22,7 +22,7 @@ const properties = {
 
 export default function HomePage(props) {
   return (
-    <div className="homePage bg-img">
+    <div className="homePage">
       <div className="slide-container">
         <Slide {...properties}>
           {slideImages.map((v, i) => {

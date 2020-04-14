@@ -1,13 +1,11 @@
 $SlideHeight: 100px;
 
-.bg-img {
+.homePage {
   background-image: url("/assets/Image/homepage_bg.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
-}
-.homePage {
-  height: 80vh;
+  //height: 80vh;
   background-color: #78b8ce;
   overflow: auto;
   padding-bottom: 300px;
