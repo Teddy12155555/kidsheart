@@ -1,3 +1,6 @@
+$tch_philo_pad_h: 45px;
+$tch_philo_bord_rad: 70px;
+
 .teachers {
   $title-width: 350px;
   > .title {
@@ -180,24 +183,78 @@
     .img-structure {
     }
   }
+
   > .img-child {
     padding-top: 100px;
     padding-bottom: 100px;
     width: 100%;
+    & > .title {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      margin-top: 400px;
+      padding: 25px 95px;
+      background-color: rgba(225, 210, 183, 0.6);
+      color: white;
+      font-size: 40px;
+      font-weight: 300;
+      word-spacing: 15px;
+      border-radius: 100px;
+    }
     img {
       position: relative;
       width: inherit;
     }
   }
+
   > .img-structure {
     position: relative;
     padding-bottom: 100px;
     width: 100%;
-    transform: scale(0.7);
+
     text-align: center;
+
+    .teaching-philo {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: -50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-content: stretch;
+      width: 100%;
+
+      div {
+        background-color: rgba(228, 228, 228, 0.9);
+        &[pos="l"] {
+          font-size: 30px;
+          flex: 0 0 40px;
+          // writing-mode: vertical-lr;
+          word-spacing: 3px;
+          font-weight: 900;
+          text-align: center;
+          border-radius: $tch_philo_bord_rad 0px 0px $tch_philo_bord_rad;
+          padding: $tch_philo_pad_h 30px;
+        }
+
+        &[pos="r"] {
+          font-size: 40px;
+          flex: 0 0 420px;
+          margin-left: 10px;
+          padding: $tch_philo_pad_h 80px;
+          text-align: left;
+          font-size: 26px;
+          font-weight: 400;
+          border-radius: 0px $tch_philo_bord_rad $tch_philo_bord_rad 0px;
+        }
+      }
+    }
     img {
       min-height: inherit;
       width: auto;
+      transform: scale(0.7) translate(-15%, 0);
     }
   }
 

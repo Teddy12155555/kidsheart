@@ -265,15 +265,22 @@ export default function Teachers(props) {
       </div>
 
       <div className="img-child">
-        <img src="/assets/Image/teacher-child.png" />
+        <div className="title">優 師 培 訓 計 畫</div>
+        <img src="/assets/Image/Teachers/teacher-child.png" />
       </div>
 
       <div className="img-structure">
-        <img src="/assets/Image/teacher-structure.png" />
+        <div className="teaching-philo">
+          <div pos="l">培 訓 理 念</div>
+          <div pos="r">
+            因應早療黃金期的重要性，以及早期療教育人員的短缺，期望透過專業培訓和教師智能檢定，培訓出願意投入特殊教育工作的夥伴們。
+          </div>
+        </div>
+        <img src="/assets/Image/Teachers/teacher-structure.png" />
       </div>
 
       <div className="img-programtitle">
-        <img src="/assets/Image/teacher-programtitle.png" />
+        <img src="/assets/Image/Teachers/teacher-programtitle.png" />
       </div>
     </div>
   );
