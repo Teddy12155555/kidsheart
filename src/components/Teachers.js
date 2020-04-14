@@ -21,7 +21,9 @@ export default function Teachers(props) {
                 <msg>創辦人</msg>
               </div>
               <div className="creater-photo-bg">
-                <div className="creater-photo"></div>
+                <div className="creater-photo">
+                  <img src="/assets/Image/Teachers/img (1).png"></img>
+                </div>
               </div>
             </div>
             <div className="creater-name">
@@ -55,7 +57,9 @@ export default function Teachers(props) {
           }
           <div className="cell">
             <div className="profile-container">
-              <div className="photo"></div>
+              <div className="photo">
+                <img src="/assets/Image/Teachers/img (2).png"></img>
+              </div>
               <div className="name">
                 <msg>黃姿涵</msg>
               </div>
@@ -82,7 +86,9 @@ export default function Teachers(props) {
           }
           <div className="cell">
             <div className="profile-container">
-              <div className="photo"></div>
+              <div className="photo">
+                <img src="/assets/Image/Teachers/img (3).png"></img>
+              </div>
               <div className="name">
                 <msg>鄭幸妮</msg>
               </div>
@@ -123,7 +129,9 @@ export default function Teachers(props) {
           }
           <div className="cell">
             <div className="profile-container">
-              <div className="photo"></div>
+              <div className="photo">
+                <img src="/assets/Image/Teachers/img (4).png"></img>
+              </div>
               <div className="name">
                 <msg>黃為</msg>
               </div>
@@ -162,7 +170,9 @@ export default function Teachers(props) {
           }
           <div className="cell">
             <div className="profile-container">
-              <div className="photo"></div>
+              <div className="photo">
+                <img src="/assets/Image/Teachers/img (5).png"></img>
+              </div>
               <div className="name">
                 <msg>葉佐田</msg>
               </div>
@@ -199,7 +209,9 @@ export default function Teachers(props) {
           }
           <div className="cell">
             <div className="profile-container">
-              <div className="photo"></div>
+              <div className="photo">
+                <img src="/assets/Image/Teachers/img (6).png"></img>
+              </div>
               <div className="name">
                 <msg>林宜萱</msg>
               </div>
@@ -234,7 +246,9 @@ export default function Teachers(props) {
           }
           <div className="cell">
             <div className="profile-container">
-              <div className="photo"></div>
+              <div className="photo">
+                <img src="/assets/Image/Teachers/img (7).png"></img>
+              </div>
               <div className="name">
                 <msg>林宜蓁</msg>
               </div>
@@ -281,6 +295,40 @@ export default function Teachers(props) {
 
       <div className="img-programtitle">
         <img src="/assets/Image/Teachers/teacher-programtitle.png" />
+      </div>
+
+      <div className="lesson-container">
+        <div className="lesson">
+          <div className="title">特 教 一 般 知 能</div>
+          <div className="desc-container">
+            <div className="point"></div>
+            <img className="img"></img>
+          </div>
+        </div>
+
+        <div className="lesson">
+          <div className="title">身 心 障 礙 學 生 評 量 與 輔 導</div>
+          <div className="desc-container">
+            <div className="point">point1</div>
+            <img className="img"></img>
+          </div>
+        </div>
+
+        <div className="lesson">
+          <div className="title">課 程 設 計 與 教 學 調 整</div>
+          <div className="desc-container">
+            <div className="point">point1</div>
+            <img className="img"></img>
+          </div>
+        </div>
+
+        <div className="lesson">
+          <div className="title">班 級 經 營 育 輔 導</div>
+          <div className="desc-container">
+            <div className="point">point1</div>
+            <img className="img"></img>
+          </div>
+        </div>
       </div>
     </div>
   );

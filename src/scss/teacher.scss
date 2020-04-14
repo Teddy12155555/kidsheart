@@ -57,6 +57,7 @@ $tch_philo_bord_rad: 70px;
         > .profile-container {
           float: left;
           .photo {
+            position: relative;
             background-color: white;
             height: $squre-unit;
             width: $squre-unit;
@@ -65,6 +66,16 @@ $tch_philo_bord_rad: 70px;
             border-color: #0c6c79;
             border-width: $squre-border;
             border-radius: 30px;
+            // overflow: hidden;
+            img {
+              box-sizing: border-box;
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              padding: 5px;
+              // max-height: 100%;
+              max-width: 100%;
+            }
           }
           .name {
             height: $squre-unit + 2 * $squre-border;
@@ -96,6 +107,7 @@ $tch_philo_bord_rad: 70px;
             background-color: #40848d;
             transform: translate(0, 160px);
             .creater-photo {
+              position: relative;
               background-color: white;
               height: $squre-unit;
               width: $squre-unit;
@@ -103,6 +115,11 @@ $tch_philo_bord_rad: 70px;
               border-color: #0c6c79;
               border-width: $squre-border;
               border-radius: 30px;
+              img {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+              }
             }
           }
 
@@ -218,18 +235,18 @@ $tch_philo_bord_rad: 70px;
     .teaching-philo {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, -50%);
       top: -50px;
+      transform: translate(-50%, -50%);
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
       align-content: stretch;
       width: 100%;
+      font-size: 26px;
 
       div {
         background-color: rgba(228, 228, 228, 0.9);
         &[pos="l"] {
-          font-size: 30px;
           flex: 0 0 40px;
           // writing-mode: vertical-lr;
           word-spacing: 3px;
@@ -240,12 +257,10 @@ $tch_philo_bord_rad: 70px;
         }
 
         &[pos="r"] {
-          font-size: 40px;
           flex: 0 0 420px;
           margin-left: 10px;
           padding: $tch_philo_pad_h 80px;
           text-align: left;
-          font-size: 26px;
           font-weight: 400;
           border-radius: 0px $tch_philo_bord_rad $tch_philo_bord_rad 0px;
         }
@@ -268,6 +283,37 @@ $tch_philo_bord_rad: 70px;
     text-align: center;
     img {
       transform: translate(0, $title-width/4);
+    }
+  }
+
+  > .lesson-container {
+    text-align: center;
+    width: 1200px;
+    margin: 100px auto;
+
+    > .lesson {
+      display: inline-block;
+      margin: 20px 50px;
+      width: 350px;
+      background-color: rgba(121, 125, 122, 0.8);
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 5px 6px;
+      box-sizing: border-box;
+      > .title {
+        padding: 10px 25px;
+        text-align: left;
+        word-spacing: 6px;
+        color: #ececec;
+      }
+
+      > .desc-container {
+        height: 0px;
+        .point {
+        }
+        img {
+        }
+      }
     }
   }
 }
