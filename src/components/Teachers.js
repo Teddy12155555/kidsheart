@@ -298,36 +298,35 @@ export default function Teachers(props) {
       </div>
 
       <div className="lesson-container">
-        <div className="lesson">
-          <div className="title">特 教 一 般 知 能</div>
-          <div className="desc-container">
-            <div className="point"></div>
+        <div className="block">
+          <div className="lesson">
+            <div className="title">特 教 一 般 知 能</div>
+            {/* <div className="desc-container">
+            <div className="point">1</div>
             <img className="img"></img>
+          </div> */}
+          </div>
+          <div className="lesson">
+            <div className="title">課 程 設 計 與 教 學 調 整</div>
+          </div>
+          <div className="lesson">
+            <div className="title">班 級 經 營 育 輔 導</div>
           </div>
         </div>
-
-        <div className="lesson">
-          <div className="title">身 心 障 礙 學 生 評 量 與 輔 導</div>
-          <div className="desc-container">
-            <div className="point">point1</div>
-            <img className="img"></img>
+        <div className="block">
+          <div className="lesson">
+            <div className="title">身 心 障 礙 學 生 評 量 與 輔 導</div>
           </div>
-        </div>
-
-        <div className="lesson">
-          <div className="title">課 程 設 計 與 教 學 調 整</div>
-          <div className="desc-container">
-            <div className="point">point1</div>
-            <img className="img"></img>
+          <div className="lesson">
+            <div className="title">親 師 互 動 與 團 隊 合 作</div>
+            <div className="desc-container">
+              <div className="point">親 師 合 作 與 家 庭 支 援</div>
+              <div className="point">特 教 資 源 整 合 運 用</div>
+              <div className="point">專 業 合 作 與 溝 通</div>
+              <img className="img" src="/assets/Image/slider0.jpg"></img>
+            </div>
           </div>
-        </div>
-
-        <div className="lesson">
-          <div className="title">班 級 經 營 育 輔 導</div>
-          <div className="desc-container">
-            <div className="point">point1</div>
-            <img className="img"></img>
-          </div>
+          <div className="lesson"></div>
         </div>
       </div>
     </div>

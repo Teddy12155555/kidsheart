@@ -288,32 +288,116 @@ $tch_philo_bord_rad: 70px;
 
   > .lesson-container {
     text-align: center;
-    width: 1200px;
+
+    // width: 1300px;
     margin: 100px auto;
 
-    > .lesson {
+    $pad: 30px;
+    $rad: 20px;
+    > .block {
       display: inline-block;
-      margin: 20px 50px;
-      width: 350px;
-      background-color: rgba(121, 125, 122, 0.8);
-      overflow: hidden;
-      border-radius: 20px;
-      padding: 5px 6px;
-      box-sizing: border-box;
-      > .title {
-        padding: 10px 25px;
-        text-align: left;
-        word-spacing: 6px;
-        color: #ececec;
-      }
-
-      > .desc-container {
-        height: 0px;
-        .point {
+      vertical-align: top;
+      > .lesson {
+        @mixin shadow() {
+          box-shadow: 7px 7px 7px -1.5px rgba(50, 50, 50, 0.2);
         }
-        img {
+
+        position: relative;
+        // display: inline-block;
+        margin: 50px 80px;
+        width: 400px;
+        height: 60px;
+        box-sizing: border-box;
+        font-size: 19px;
+        font-weight: 300;
+        overflow: visible;
+
+        > .title {
+          @include shadow();
+
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          padding: 0 $pad;
+          text-align: left;
+          word-spacing: 6px;
+          color: white;
+          background-color: rgba(120, 120, 120, 0.9);
+          line-height: 60px;
+          border-radius: $rad;
+        }
+
+        > .desc-container {
+          // display: none;
+          $font-color: white;
+          @include shadow();
+
+          position: absolute;
+          top: 100%;
+          box-sizing: border-box;
+          width: 100%;
+          height: 0px;
+          text-align: left;
+          opacity: 0;
+          z-index: 1;
+          overflow: hidden;
+
+          color: $font-color;
+
+          .point {
+            $dot_size: 6px;
+            padding-top: 10px;
+            font-size: 115%;
+
+            &::before {
+              content: "";
+              transform: translate(-50%, -50%);
+              display: inline-block;
+              width: $dot_size;
+              height: $dot_size;
+              border-radius: $dot_size * 1.5;
+              margin-right: 7px;
+              background-color: $font-color;
+            }
+          }
+
+          img {
+            display: block;
+            max-width: 100%;
+            margin-top: 20px;
+            padding: 0px 5px;
+            box-sizing: border-box;
+          }
+        }
+
+        &:hover {
+          > .title {
+            border-radius: $rad $rad 0px 0px;
+            transition: all 0.4s 0.1s;
+            background-color: rgba(200, 200, 200, 0.9);
+            color: black;
+          }
+          > .desc-container {
+            display: block;
+            height: auto;
+            border-radius: 0px 0px $rad $rad;
+            padding: 10px $pad;
+            opacity: 1;
+            background-color: rgba(120, 120, 120, 0.9);
+            transition: all 0.4s 0.1s;
+          }
         }
       }
     }
+  }
+}
+
+@keyframes Test {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
   }
 }
