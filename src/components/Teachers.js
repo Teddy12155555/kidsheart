@@ -297,7 +297,17 @@ export default function Teachers(props) {
       <div className="img-programtitle">
         <img src="/assets/Image/Teachers/teacher-programtitle.png" />
       </div>
-      <div className="bg-3">
+      <div
+        style={{
+          position: "relative",
+        }}
+      >
+        <img
+          src="/assets/Image/Teachers/bg-3.png"
+          style={{
+            width: "100%",
+          }}
+        ></img>
         <div className="lesson-container">
           <div className="block">
             <div className="lesson">
