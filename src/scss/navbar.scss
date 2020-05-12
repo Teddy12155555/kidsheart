@@ -14,6 +14,10 @@ $search-hieght: 3px;
     padding: 0;
     overflow: hidden;
   }
+  > .seperator {
+    height: 15px;
+    background-color: rgb(211, 234, 245);
+  }
 }
 .nav-cell {
   float: right;

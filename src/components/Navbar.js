@@ -69,7 +69,7 @@ export default function Navbar(props) {
             </button>
             <div class="dropdown-content">
               <a href="./working">品牌故事</a>
-              <a href="./working">聯絡方式</a>
+              <a href="./contact">聯絡方式</a>
             </div>
           </div>
         </div>
@@ -80,6 +80,7 @@ export default function Navbar(props) {
           </a>
         </li>
       </ul>
+      <div className="seperator" />
     </div>
   );
 }
