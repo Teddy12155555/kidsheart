@@ -68,7 +68,7 @@ export default function Navbar(props) {
               關於我們
             </button>
             <div class="dropdown-content">
-              <a href="./working">品牌故事</a>
+              <a href="./brand">品牌故事</a>
               <a href="./contact">聯絡方式</a>
             </div>
           </div>
