@@ -5,8 +5,10 @@ $nav-font-size: 15pt;
 $nav-padding: 25px;
 $search-hieght: 3px;
 .navbar {
-  overflow: hidden;
+  overflow: visible;
   background-color: #78b8ce;
+  position: relative;
+  z-index: 2;
   ul {
     height: $nav-hieght;
     list-style-type: none;

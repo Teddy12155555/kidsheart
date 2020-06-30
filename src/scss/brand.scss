@@ -1,0 +1,191 @@
+$arrow_size: 40px;
+$indicators_bg_z_index: 1;
+$link_ellipse_size: 240px;
+$check_mark_height: 25px;
+$video_indicator_color: #236d7a;
+.brand {
+  position: relative;
+
+  & > img:first-of-type {
+    width: 100%;
+    display: block;
+  }
+  .brand-container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    text-align: center;
+
+    .video-slides {
+      .react-slideshow-container {
+        position: relative;
+        & > div {
+          &[data-type="prev"] {
+            // transform: translate(0, 0);
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            z-index: 1;
+            width: $arrow_size;
+            height: $arrow_size;
+            background-image: url("/assets/Image/Brand/left_arrow.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          &[data-type="next"] {
+            transform: translate(-100%, 0);
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            z-index: 1;
+            width: $arrow_size;
+            height: $arrow_size;
+            background-image: url("/assets/Image/Brand/right_arrow.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      .slide-indicators-container {
+        position: relative;
+        display: flex;
+        z-index: 0;
+        .indicator {
+          position: relative;
+          .current {
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            top: 0;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            background-color: $video_indicator_color;
+            border-radius: 100px;
+          }
+          background-color: $video_indicator_color;
+          display: inline-block;
+          padding: 20px 50px;
+          text-align: center;
+          font-size: 18px;
+          flex-grow: 1;
+          color: white;
+          &.append {
+            border: 0px;
+            border-left: 1.5px;
+            border-color: #4e919c;
+            border-style: solid;
+          }
+        }
+      }
+    }
+    .brand-intro {
+      position: relative;
+      text-align: left;
+      width: 100%;
+      margin-top: 450px;
+      margin-bottom: 200px;
+      padding: 50px 0px 100px 0px;
+      background-color: #e4d8c4;
+      .icons {
+        .logo {
+          background-color: white;
+          display: inline-block;
+          padding: 12px 60px 12px 50px;
+          border-radius: 0px 300px 300px 0px;
+          box-shadow: 5px 5px 10px -5px #777777;
+          box-sizing: border-box;
+          // height: 80px;
+          img {
+            height: 60px;
+          }
+        }
+      }
+      .intro-texts {
+        padding: 0px 70px;
+        width: 44%;
+        font-size: 104%;
+        .intro-text {
+          margin: 40px 0px;
+          letter-spacing: 6px;
+          font-weight: 500;
+          white-space: pre-wrap;
+        }
+      }
+      .intro-link {
+        position: absolute;
+        z-index: -1;
+        display: inline-block;
+        width: $link_ellipse_size;
+        height: $link_ellipse_size;
+        background-image: url(/assets/Image/Brand/ellipse.png);
+        transform: translate(-50%, 0%);
+        background-size: contain;
+        color: black;
+
+        .name {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -10%);
+          font-weight: 500;
+          font-size: 150%;
+        }
+
+        &:hover {
+          width: $link_ellipse_size * 1.1;
+          height: $link_ellipse_size * 1.1;
+          background-image: url(/assets/Image/Brand/ellipse_hover.png);
+          z-index: auto;
+          color: white;
+        }
+      }
+    }
+    .slogan {
+      margin-top: 100px;
+      display: inline-block;
+      height: 250px;
+
+      .title {
+        writing-mode: vertical-lr;
+        float: left;
+        font-size: 250%;
+        font-weight: 900;
+        letter-spacing: 10px;
+      }
+      .points {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        height: 100%;
+        margin-left: 20px;
+        .point {
+          text-align: left;
+          flex-grow: 0;
+          flex-shrink: 0;
+          box-sizing: border-box;
+          padding: 0px 20px;
+          padding-bottom: 10px;
+          border-bottom-style: dashed;
+          border-color: grey;
+
+          img {
+            height: $check_mark_height;
+          }
+
+          span {
+            font-size: $check_mark_height - 2px;
+            font-weight: 500;
+            margin-left: 15px;
+            letter-spacing: 5px;
+          }
+        }
+      }
+    }
+  }
+}
