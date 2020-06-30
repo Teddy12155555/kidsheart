@@ -7,9 +7,9 @@ export default function Footer(props) {
       <div className="seperator" />
       <div className="container">
         <div className="icons">
-          <a href="#" class="fa fa-comment icon" />
-          <a href="#" class="fa fa-envelope icon"></a>
-          <a href="#" class="fa fa-facebook-f icon" />
+          <a href="#" className="fa fa-comment icon" />
+          <a href="#" className="fa fa-envelope icon"></a>
+          <a href="#" className="fa fa-facebook-f icon" />
         </div>
         <div className="column">
           <div className="title">HOME</div>

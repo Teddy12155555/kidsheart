@@ -43,7 +43,7 @@ export default function Teachers(props) {
                 </div>
                 <div className="resume-cell">
                   <msgtitle>經歷：</msgtitle>
-                  <firstmsg>國立清華大學特殊教育學系 專任副教授</firstmsg>
+                  <firstmsg>國立清華大學特殊教育學系 專任教授</firstmsg>
                   <br />
                   <msg>國立新竹教育大學特殊教育學系 專任副教授</msg>
                   <br />

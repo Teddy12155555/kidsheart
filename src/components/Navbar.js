@@ -22,11 +22,11 @@ export default function Navbar(props) {
 
         <div className="nav-cell">
           <div className="dropdown">
-            <button class="dropbtn">
-              <i class="fa fa-caret-down"></i>
+            <button className="dropbtn">
+              <i className="fa fa-caret-down"></i>
               活動資訊
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a href="./working">最新開課</a>
               <a href="./working">親職講座</a>
               <a href="./working">公益活動</a>
@@ -36,25 +36,25 @@ export default function Navbar(props) {
 
         <div className="nav-cell">
           <div className="dropdown">
-            <button class="dropbtn">
-              <i class="fa fa-caret-down"></i>
+            <button className="dropbtn">
+              <i className="fa fa-caret-down"></i>
               成果展示
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a href="./working">參與者回饋</a>
               <a href="./working">著作 / 展示</a>
             </div>
           </div>
         </div>
 
-        <div class="nav-cell">
+        <div className="nav-cell">
           <div className="dropdown">
-            <button class="dropbtn">
-              <i class="fa fa-caret-down"></i>
+            <button className="dropbtn">
+              <i className="fa fa-caret-down"></i>
               服務項目
             </button>
-            <div class="dropdown-content">
-              <a href="./working">孩童評量</a>
+            <div className="dropdown-content">
+              <a href="./evaluation">孩童評量</a>
               <a href="./teachers">優師培訓</a>
               <a href="./working">課程探索</a>
             </div>
@@ -63,8 +63,8 @@ export default function Navbar(props) {
 
         <div className="nav-cell">
           <div className="dropdown">
-            <button class="dropbtn">
-              <i class="fa fa-caret-down"></i>
+            <button className="dropbtn">
+              <i className="fa fa-caret-down"></i>
               關於我們
             </button>
             <div class="dropdown-content">

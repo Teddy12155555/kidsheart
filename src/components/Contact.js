@@ -8,7 +8,7 @@ export default function Contact(props) {
   const SendEmail = () => {
     console.log("Sending");
     var templateParams = {
-      to_email: "vhanxtreme@gmail.com",
+      to_email: "childheartjj@gmail.com",
       message: document.getElementById("reply_textbox").value,
     };
 
@@ -29,7 +29,6 @@ export default function Contact(props) {
           alert("回覆系統無法正常運作，請稍後再嘗試。");
         }
       );
-    console.log("GG");
     // setSend("已送出！謝謝您！");
   };
   return (
