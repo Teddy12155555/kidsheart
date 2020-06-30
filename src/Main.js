@@ -13,6 +13,7 @@ import Evaluation from "./components/Evaluation";
 import Courses from "./components/Courses";
 import StillWorking from "./components/StillWorking";
 import Brand from "./components/Brand";
+import Lesson from "./components/Lesson";
 import "./main.scss";
 
 function Main() {
@@ -27,6 +28,7 @@ function Main() {
         <Route path="/evaluation" component={Evaluation} />
         <Route path="/courses" component={Courses} />
         <Route path="/brand" component={Brand} />
+        <Route path="/lesson" component={Lesson} />
         <Route path="/working" component={StillWorking} />
         <Redirect exact from="/" to="/home" />
       </Switch>
