@@ -21,6 +21,7 @@ export default class Lesson extends React.Component {
     this.slideRef = null;
 
     this.state = {};
+    this.scrollSetting = { behavior: "smooth", block: "start" };
   }
 
   render() {
@@ -98,21 +99,53 @@ export default class Lesson extends React.Component {
           }}
         ></img>
         <div className="navlinks">
-          <div>感覺統合課程</div>
-          <div>語言理解課程</div>
-          <div>樂高機器人</div>
-          <div>情緒行為課程</div>
+          <div
+            onClick={() => {
+              document
+                .getElementById("section_1")
+                .scrollIntoView(this.scrollSetting);
+            }}
+          >
+            感覺統合課程
+          </div>
+          <div
+            onClick={() => {
+              document
+                .getElementById("section_2")
+                .scrollIntoView(this.scrollSetting);
+            }}
+          >
+            語言理解課程
+          </div>
+          <div
+            onClick={() => {
+              document
+                .getElementById("section_3")
+                .scrollIntoView(this.scrollSetting);
+            }}
+          >
+            樂高機器人
+          </div>
+          <div
+            onClick={() => {
+              document
+                .getElementById("section_4")
+                .scrollIntoView(this.scrollSetting);
+            }}
+          >
+            情緒行為課程
+          </div>
         </div>
-        <div className="title" style={{ top: "855px" }}>
+        <div className="title" id="section_1" style={{ top: "855px" }}>
           感覺統合
         </div>
-        <div className="title" style={{ top: "5700px" }}>
+        <div className="title" id="section_2" style={{ top: "5700px" }}>
           語言理解課程
         </div>
-        <div className="title" style={{ top: "7900px" }}>
+        <div className="title" id="section_3" style={{ top: "7900px" }}>
           樂高機器人
         </div>
-        <div className="title" style={{ top: "9500px" }}>
+        <div className="title" id="section_4" style={{ top: "9500px" }}>
           情緒行為課程
         </div>
         <div className="container">
