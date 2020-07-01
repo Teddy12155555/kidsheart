@@ -24,6 +24,37 @@ $letter_space: 3px;
     border-color: black;
   }
 
+  .lesson_ad {
+    margin-top: -250px;
+    z-index: 3;
+    position: relative;
+    > .title {
+      position: absolute;
+      left: 350px;
+      top: 150px;
+      font-size: 250%;
+      font-weight: 500;
+      color: white;
+      letter-spacing: 25px;
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      white-space: pre-line;
+    }
+
+    & > .lesson_links {
+      position: absolute;
+      text-align: center;
+      width: auto;
+      right: 150px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      > div {
+        display: block;
+        margin-top: 80px;
+      }
+    }
+  }
+
   > .title {
     z-index: 5;
     position: absolute;
@@ -268,20 +299,21 @@ $letter_space: 3px;
     width: 100%;
     top: 570px;
     text-align: center;
-    div {
-      text-align: center;
-      display: inline-block;
-      border-style: solid;
-      border-color: white;
-      color: white;
-      padding: 17px 24px;
-      font-size: 90%;
-      letter-spacing: 5px;
-      margin: 0px 36px;
+  }
 
-      &:hover {
-        background-color: #f6c363;
-      }
+  .button {
+    text-align: center;
+    display: inline-block;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    padding: 17px 24px;
+    font-size: 90%;
+    letter-spacing: 5px;
+    margin: 0px 36px;
+
+    &:hover {
+      background-color: #f6c363;
     }
   }
 }

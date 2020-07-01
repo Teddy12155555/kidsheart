@@ -21,7 +21,37 @@ export default class Lesson extends React.Component {
     this.slideRef = null;
 
     this.state = {};
+
     this.scrollSetting = { behavior: "smooth", block: "start" };
+    this.lesson_links = [
+      {
+        name: "線上專人諮詢",
+        url: "/working",
+      },
+      {
+        name: "最新開課資訊",
+        url: "/working",
+      },
+    ];
+
+    this.sections = [
+      {
+        name: "感覺統合課程",
+        height: "855px",
+      },
+      {
+        name: "語言理解課程",
+        height: "5700px",
+      },
+      {
+        name: "樂高機器人",
+        height: "7900px",
+      },
+      {
+        name: "情緒行為課程",
+        height: "9500px",
+      },
+    ];
   }
 
   render() {
@@ -90,64 +120,54 @@ export default class Lesson extends React.Component {
           }}
         ></img>
         {/* <img src="/assets/Image/Lesson/bg7.png"></img> */}
-        <img
-          src="/assets/Image/Lesson/bg_last.png"
-          style={{
-            marginTop: "-250px",
-            zIndex: "3",
-            position: "relative",
-          }}
-        ></img>
+        <div className="lesson_ad">
+          <img src="/assets/Image/Lesson/bg_last.png"></img>
+          <div className="title">{"快來看看童心匯\n最新開課內容!"}</div>
+          <div className="lesson_links">
+            {this.lesson_links.map((v, i) => {
+              return (
+                <div
+                  className="button"
+                  onClick={() => {
+                    window.location.href = v.url;
+                  }}
+                >
+                  {v.name}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="navlinks">
-          <div
-            onClick={() => {
-              document
-                .getElementById("section_1")
-                .scrollIntoView(this.scrollSetting);
-            }}
-          >
-            感覺統合課程
-          </div>
-          <div
-            onClick={() => {
-              document
-                .getElementById("section_2")
-                .scrollIntoView(this.scrollSetting);
-            }}
-          >
-            語言理解課程
-          </div>
-          <div
-            onClick={() => {
-              document
-                .getElementById("section_3")
-                .scrollIntoView(this.scrollSetting);
-            }}
-          >
-            樂高機器人
-          </div>
-          <div
-            onClick={() => {
-              document
-                .getElementById("section_4")
-                .scrollIntoView(this.scrollSetting);
-            }}
-          >
-            情緒行為課程
-          </div>
+          {this.sections.map((v, i) => {
+            return (
+              <div
+                className="button"
+                onClick={() => {
+                  document
+                    .getElementById(`section_${i}`)
+                    .scrollIntoView(this.scrollSetting);
+                }}
+              >
+                {v.name}
+              </div>
+            );
+          })}
         </div>
-        <div className="title" id="section_1" style={{ top: "855px" }}>
-          感覺統合
-        </div>
-        <div className="title" id="section_2" style={{ top: "5700px" }}>
-          語言理解課程
-        </div>
-        <div className="title" id="section_3" style={{ top: "7900px" }}>
-          樂高機器人
-        </div>
-        <div className="title" id="section_4" style={{ top: "9500px" }}>
-          情緒行為課程
-        </div>
+
+        {this.sections.map((v, i) => {
+          return (
+            <div
+              className="title"
+              id={`section_${i}`}
+              style={{ top: v.height }}
+            >
+              {v.name}
+            </div>
+          );
+        })}
+
         <div className="container">
           <div className="title">什麼是感覺統合?</div>
           <div className="content_text">
