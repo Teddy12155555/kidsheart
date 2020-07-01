@@ -2,6 +2,115 @@ import React, { useState, Component, useRef } from "react";
 import { Slide, Zoom } from "react-slideshow-image";
 import "../scss/record.scss";
 
+class SubBrowser extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      displaying: 0,
+    };
+    this.Arrange = this.Arrange.bind(this);
+    this.fullSrcLength = this.props.fullSrc.length;
+  }
+
+  Arrange(start) {
+    let ret = [];
+
+    if (start < this.fullSrcLength) {
+      ret = [
+        <div
+          className={"container first"}
+          onClick={(e) => {
+            // this.setState({
+            //   displaying: (start + 1) % length,
+            // });
+            e.stopPropagation();
+          }}
+        >
+          <img src={`/assets/Image/Record/${this.props.fullSrc[start]}`}></img>
+        </div>,
+      ];
+      for (let j = 1; j < this.fullSrcLength; j += 2) {
+        ret = ret.concat(
+          [j, -j].map((v, _) => {
+            let i = (start + v) % this.fullSrcLength;
+            i = i < 0 ? i + this.fullSrcLength : i;
+            if (this.props.fullSrc[i] != null) {
+              return (
+                <div
+                  className={"container"}
+                  style={{
+                    top: `50%`,
+                    left: `${v * 100}px`,
+                    transform: "translate(0%, -50%)",
+                  }}
+                  onClick={(e) => {
+                    this.setState({
+                      displaying: (i + 1) % this.fullSrcLength,
+                    });
+                    e.stopPropagation();
+                  }}
+                >
+                  <img
+                    src={`/assets/Image/Record/${this.props.fullSrc[i]}`}
+                  ></img>
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })
+        );
+      }
+    }
+
+    return ret.reverse();
+  }
+
+  render() {
+    return (
+      <div
+        className="browser"
+        onClick={() => {
+          this.props.browse_sub(null);
+        }}
+      >
+        <div className="anchor">{this.Arrange(this.state.displaying)}</div>
+        <div
+          className="nav"
+          style={{
+            left: 0,
+          }}
+          onClick={(e) => {
+            let newIndex = (this.state.displaying + 1) % this.fullSrcLength;
+            this.setState({
+              displaying: newIndex,
+            });
+            e.stopPropagation();
+          }}
+        >
+          <img src="/assets/Image/Record/browser/prev.png"></img>
+        </div>
+        <div
+          className="nav"
+          style={{
+            right: 0,
+          }}
+          onClick={(e) => {
+            let newIndex = (this.state.displaying - 1) % this.fullSrcLength;
+            newIndex = newIndex < 0 ? newIndex + this.fullSrcLength : newIndex;
+            this.setState({
+              displaying: newIndex,
+            });
+            e.stopPropagation();
+          }}
+        >
+          <img src="/assets/Image/Record/browser/next.png"></img>
+        </div>
+      </div>
+    );
+  }
+}
+
 class SubContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +119,11 @@ class SubContainer extends React.Component {
     this.scrolling = false;
     this.start_left_x = 0;
     this.start_scroll_left = 0;
+    this.click_on_sub = null;
+    this.click_pos = {
+      x: 0,
+      y: 0,
+    };
   }
 
   render() {
@@ -36,9 +150,32 @@ class SubContainer extends React.Component {
           this.container.current.scrollLeft = this.start_scroll_left - move;
         }}
       >
-        {this.props.cat_obj.subs.map((v, i) => {
+        {this.props.cat_subs.map((v, i) => {
           return (
-            <div key={i} className="sub-cover">
+            <div
+              key={i}
+              className="sub-cover"
+              onMouseDown={(e) => {
+                this.click_on_sub = i;
+                this.click_pos = { x: e.pageX, y: e.pageY };
+              }}
+              onMouseMove={(e) => {
+                if (
+                  this.click_on_sub != null &&
+                  (e.pageX - this.click_pos.x) ** 2 +
+                    (e.pageY - this.click_pos.y) ** 2 >
+                    900
+                ) {
+                  this.click_on_sub = null;
+                }
+              }}
+              onMouseUp={(e) => {
+                if (this.click_on_sub == i) {
+                  this.props.browse_sub(i);
+                }
+                this.click_on_sub = null;
+              }}
+            >
               <div className="title">{v.title}</div>
               {v.coverSrc.map((iv, ii) => {
                 return <img key={ii} src={`${this.recordDir}${iv}`}></img>;
@@ -46,6 +183,41 @@ class SubContainer extends React.Component {
             </div>
           );
         })}
+      </div>
+    );
+  }
+}
+
+class CategoryContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      browsing_sub: null,
+    };
+    this.browse_sub = this.browse_sub.bind(this);
+  }
+
+  browse_sub(i) {
+    this.setState({
+      browsing_sub: i,
+    });
+  }
+
+  render() {
+    return (
+      <div className="category-container">
+        {this.state.browsing_sub != null ? (
+          <SubBrowser
+            fullSrc={this.props.cat_obj.subs[this.state.browsing_sub].fullSrc}
+            browse_sub={this.browse_sub}
+          />
+        ) : null}
+
+        <div className="title">{this.props.cat_obj.category}</div>
+        <SubContainer
+          cat_subs={this.props.cat_obj.subs}
+          browse_sub={this.browse_sub}
+        />
       </div>
     );
   }
@@ -85,7 +257,7 @@ export default class Record extends React.Component {
           {
             title: "xx課程",
             coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
-            fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
+            fullSrc: ["test (1).jpg", "test (1).jpg", "test (1).jpg"],
           },
           {
             title: "xx課程",
@@ -177,12 +349,7 @@ export default class Record extends React.Component {
     return (
       <div className="record">
         {this.pageData.map((v, i) => {
-          return (
-            <div key={i} className="category-container">
-              <div className="title">{v.category}</div>
-              <SubContainer cat_obj={v} />
-            </div>
-          );
+          return <CategoryContainer key={i} cat_obj={v} />;
         })}
       </div>
     );
