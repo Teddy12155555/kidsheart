@@ -14,6 +14,8 @@ import Courses from "./components/Courses";
 import StillWorking from "./components/StillWorking";
 import Brand from "./components/Brand";
 import "./main.scss";
+import "./scss/global.scss";
+import "./scss/buttons.scss";
 
 function Main() {
   return (
