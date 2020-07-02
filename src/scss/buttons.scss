@@ -1,0 +1,15 @@
+.button_white_opa_hover {
+  text-align: center;
+  display: inline-block;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  padding: 17px 24px;
+  font-size: 90%;
+  letter-spacing: 5px;
+  margin: 0px 36px;
+
+  &:hover {
+    background-color: #f6c363;
+  }
+}

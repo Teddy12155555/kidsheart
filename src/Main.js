@@ -16,6 +16,8 @@ import Brand from "./components/Brand";
 import Lesson from "./components/Lesson";
 import Record from "./components/Record";
 import "./main.scss";
+import "./scss/global.scss";
+import "./scss/buttons.scss";
 
 function Main() {
   return (
