@@ -15,6 +15,8 @@ import StillWorking from "./components/StillWorking";
 import Brand from "./components/Brand";
 import Record from "./components/Record";
 import "./main.scss";
+import "./scss/global.scss";
+import "./scss/buttons.scss";
 
 function Main() {
   return (
