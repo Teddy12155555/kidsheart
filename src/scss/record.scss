@@ -42,15 +42,20 @@
           position: absolute;
           width: 100%;
           box-shadow: 8px 8px 20px -2px black;
-          animation: Emerge 1s ease-in 0s 1 normal both;
-          transition: all ease-in 2s;
+          background-color: #0e0e0efa;
+          transition: margin 0.5s ease 0s;
+          transform: translate(0%, -50%);
           > img {
             max-width: 100%;
             display: block;
           }
-          &.first {
-            position: relative !important;
-          }
+          // &.first {
+          //   position: relative !important;
+          //   animation: Emerge 0.5s ease-in 0s 1 normal both;
+          // }
+          // &.other {
+          //   animation: Emerge 1.5s ease 0s 1 normal both;
+          // }
         }
       }
 

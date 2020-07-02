@@ -16,51 +16,29 @@ class SubBrowser extends React.Component {
     let ret = [];
 
     if (start < this.fullSrcLength) {
-      ret = [
-        <div
-          className={"container first"}
-          onClick={(e) => {
-            // this.setState({
-            //   displaying: (start + 1) % length,
-            // });
-            e.stopPropagation();
-          }}
-        >
-          <img src={`/assets/Image/Record/${this.props.fullSrc[start]}`}></img>
-        </div>,
-      ];
-      for (let j = 1; j < this.fullSrcLength; j += 2) {
-        ret = ret.concat(
-          [j, -j].map((v, _) => {
-            let i = (start + v) % this.fullSrcLength;
-            i = i < 0 ? i + this.fullSrcLength : i;
-            if (this.props.fullSrc[i] != null) {
-              return (
-                <div
-                  className={"container"}
-                  style={{
-                    top: `50%`,
-                    left: `${v * 100}px`,
-                    transform: "translate(0%, -50%)",
-                  }}
-                  onClick={(e) => {
-                    this.setState({
-                      displaying: (i + 1) % this.fullSrcLength,
-                    });
-                    e.stopPropagation();
-                  }}
-                >
-                  <img
-                    src={`/assets/Image/Record/${this.props.fullSrc[i]}`}
-                  ></img>
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })
+      ret = this.props.fullSrc.map((v, i) => {
+        let distance = start - i;
+        let front_z = Math.floor(this.fullSrcLength / 2) + 1;
+        return (
+          <div
+            key={i}
+            className={"container"}
+            style={{
+              marginLeft: `${distance * 200}px`,
+              marginTop: `${Math.abs(distance) * 20}px`,
+              zIndex: `${front_z - Math.abs(distance)}`,
+            }}
+            onClick={(e) => {
+              this.setState({
+                displaying: i,
+              });
+              e.stopPropagation();
+            }}
+          >
+            <img src={`/assets/Image/Record/${this.props.fullSrc[i]}`}></img>
+          </div>
         );
-      }
+      });
     }
 
     return ret.reverse();
@@ -262,7 +240,14 @@ export default class Record extends React.Component {
           {
             title: "xx課程",
             coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
-            fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
+            fullSrc: [
+              "test (1).jpg",
+              "test (1).png",
+              "test (2).png",
+              "test (1).jpg",
+              "test (1).png",
+              "test (2).png",
+            ],
           },
           {
             title: "xx課程",
