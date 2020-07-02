@@ -9,7 +9,10 @@ class SubBrowser extends React.Component {
       displaying: 0,
     };
     this.Arrange = this.Arrange.bind(this);
+    this.Leave = this.Leave.bind(this);
+    this.Switch = this.Switch.bind(this);
     this.fullSrcLength = this.props.fullSrc.length;
+    this.videoPlayer = React.createRef();
   }
 
   Arrange(start) {
@@ -22,20 +25,32 @@ class SubBrowser extends React.Component {
         return (
           <div
             key={i}
-            className={"container"}
+            className={"container " + (i == start ? "showing" : "hidden")}
             style={{
               marginLeft: `${distance * 200}px`,
               marginTop: `${Math.abs(distance) * 20}px`,
               zIndex: `${front_z - Math.abs(distance)}`,
             }}
             onClick={(e) => {
-              this.setState({
-                displaying: i,
-              });
+              this.Switch(i);
               e.stopPropagation();
             }}
           >
-            <img src={`/assets/Image/Record/${this.props.fullSrc[i]}`}></img>
+            {this.props.fullSrc[i].split(".").pop() == "mp4" ? (
+              <video
+                width="100%"
+                controls
+                ref={distance == 0 ? this.videoPlayer : null}
+              >
+                <source
+                  src={`/assets/Image/Record/${this.props.fullSrc[i]}`}
+                  type="video/mp4"
+                />
+                Your browser does not support HTML video.
+              </video>
+            ) : (
+              <img src={`/assets/Image/Record/${this.props.fullSrc[i]}`}></img>
+            )}
           </div>
         );
       });
@@ -44,12 +59,28 @@ class SubBrowser extends React.Component {
     return ret.reverse();
   }
 
+  Leave() {
+    this.props.browse_sub(null);
+    if (this.videoPlayer.current != null) {
+      this.videoPlayer.current.pause();
+    }
+  }
+
+  Switch(index) {
+    this.setState({
+      displaying: index,
+    });
+    if (this.videoPlayer.current != null) {
+      this.videoPlayer.current.pause();
+    }
+  }
+
   render() {
     return (
       <div
         className="browser"
         onClick={() => {
-          this.props.browse_sub(null);
+          this.Leave();
         }}
       >
         <div className="anchor">{this.Arrange(this.state.displaying)}</div>
@@ -60,9 +91,7 @@ class SubBrowser extends React.Component {
           }}
           onClick={(e) => {
             let newIndex = (this.state.displaying + 1) % this.fullSrcLength;
-            this.setState({
-              displaying: newIndex,
-            });
+            this.Switch(newIndex);
             e.stopPropagation();
           }}
         >
@@ -76,9 +105,7 @@ class SubBrowser extends React.Component {
           onClick={(e) => {
             let newIndex = (this.state.displaying - 1) % this.fullSrcLength;
             newIndex = newIndex < 0 ? newIndex + this.fullSrcLength : newIndex;
-            this.setState({
-              displaying: newIndex,
-            });
+            this.Switch(newIndex);
             e.stopPropagation();
           }}
         >
@@ -183,7 +210,7 @@ class CategoryContainer extends React.Component {
 
   render() {
     return (
-      <div className="category-container">
+      <div className="category-container" id={`cat_con${this.props.index}`}>
         {this.state.browsing_sub != null ? (
           <SubBrowser
             fullSrc={this.props.cat_obj.subs[this.state.browsing_sub].fullSrc}
@@ -191,7 +218,14 @@ class CategoryContainer extends React.Component {
           />
         ) : null}
 
-        <div className="title">{this.props.cat_obj.category}</div>
+        <div
+          className="title"
+          style={{
+            textAlign: this.props.index % 2 == 0 ? "left" : "right",
+          }}
+        >
+          {this.props.cat_obj.category}
+        </div>
         <SubContainer
           cat_subs={this.props.cat_obj.subs}
           browse_sub={this.browse_sub}
@@ -225,17 +259,25 @@ export default class Record extends React.Component {
       slideShow: 0,
     };
 
+    this.scrollSetting = { behavior: "smooth", block: "start" };
+
     this.ChangeSlide = this.ChangeSlide.bind(this);
     this.OnSlideChange = this.OnSlideChange.bind(this);
 
     this.pageData = [
       {
         category: "課程照片、影片",
+        linkname: "課程",
         subs: [
           {
             title: "xx課程",
             coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
-            fullSrc: ["test (1).jpg", "test (1).jpg", "test (1).jpg"],
+            fullSrc: [
+              "test (1).jpg",
+              "test (1).jpg",
+              "test (1).jpg",
+              "test.mp4",
+            ],
           },
           {
             title: "xx課程",
@@ -277,40 +319,42 @@ export default class Record extends React.Component {
         ],
       },
       {
-        category: "課程照片、影片",
+        category: "營隊活動照片、影片",
+        linkname: "營隊活動",
         subs: [
           {
-            title: "xx課程",
+            title: "xx活動",
             coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
             fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
           },
           {
-            title: "xx課程",
+            title: "xx活動",
             coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
             fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
           },
           {
-            title: "xx課程",
+            title: "xx活動",
+            coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
+            fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
+          },
+        ],
+      },
+      {
+        category: "公益活動照片、影片",
+        linkname: "公益活動",
+        subs: [
+          {
+            title: "xx活動",
             coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
             fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
           },
           {
-            title: "xx課程",
+            title: "xx活動",
             coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
             fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
           },
           {
-            title: "xx課程",
-            coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
-            fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
-          },
-          {
-            title: "xx課程",
-            coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
-            fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
-          },
-          {
-            title: "xx課程",
+            title: "xx活動",
             coverSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
             fullSrc: ["test (1).jpg", "test (1).png", "test (2).png"],
           },
@@ -333,9 +377,52 @@ export default class Record extends React.Component {
   render() {
     return (
       <div className="record">
+        <div className="banner">
+          <img
+            className="yield"
+            style={{
+              width: "900px",
+            }}
+          ></img>
+          <img src="/assets/Image/Record/ban2.png"></img>
+          <div className="links">
+            {this.pageData.map((v, i) => {
+              return (
+                <div className="holder">
+                  <div
+                    key={i}
+                    className="button_white_opa_hover"
+                    onClick={() => {
+                      document
+                        .getElementById(`cat_con${i}`)
+                        .scrollIntoView(this.scrollSetting);
+                    }}
+                  >
+                    {v.linkname}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
         {this.pageData.map((v, i) => {
-          return <CategoryContainer key={i} cat_obj={v} />;
+          return <CategoryContainer key={i} cat_obj={v} index={i} />;
         })}
+        <div className="more">
+          <div
+            className="stick"
+            style={{
+              left: "0",
+            }}
+          ></div>
+          <div className="text">將會隨活動更新 敬請期待</div>
+          <div
+            className="stick"
+            style={{
+              right: "0",
+            }}
+          ></div>
+        </div>
       </div>
     );
   }

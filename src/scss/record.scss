@@ -6,7 +6,19 @@
     opacity: 1;
   }
 }
+@keyframes SwapUp {
+  0% {
+    top: -500px;
+    opacity: 0;
+  }
 
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+$container_bg_color: #242424;
 .record {
   width: 100%;
   position: relative;
@@ -14,11 +26,33 @@
   font-weight: 500;
   letter-spacing: 7px;
   color: white;
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    white-space: nowrap;
+    img {
+      height: 100%;
+    }
+    .links {
+      position: absolute;
+      overflow: auto;
+      top: 50%;
+      right: 150px;
+      transform: translate(0, -50%);
+      text-align: center;
+      > .holder {
+        margin: 40px 0px;
+      }
+    }
+  }
+
   .category-container {
     position: relative;
     width: 100%;
     padding: 50px 30px;
-    background-color: #242424;
+    background-color: $container_bg_color;
     border-top: 7px solid #abc3d1;
     box-sizing: border-box;
 
@@ -35,27 +69,37 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 500px;
+        width: 600px;
         transform: translate(-50%, -50%);
         overflow: visible;
         > .container {
           position: absolute;
           width: 100%;
+          padding-top: 75%;
           box-shadow: 8px 8px 20px -2px black;
           background-color: #0e0e0efa;
-          transition: margin 0.5s ease 0s;
+          transition: margin 1s ease 0s, opacity 1.5s ease 0s;
           transform: translate(0%, -50%);
-          > img {
+          opacity: 1;
+          // animation: Emerge 1.5s ease 0s 1 normal both;
+          > img,
+          video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             max-width: 100%;
+            max-height: 100%;
             display: block;
           }
-          // &.first {
-          //   position: relative !important;
-          //   animation: Emerge 0.5s ease-in 0s 1 normal both;
-          // }
-          // &.other {
-          //   animation: Emerge 1.5s ease 0s 1 normal both;
-          // }
+
+          &.showing {
+            // animation: SwapUp 1.5s ease 0s 1 normal both;
+          }
+
+          &.hidden {
+            // opacity: 0.9;
+          }
         }
       }
 
@@ -101,6 +145,28 @@
           display: block;
         }
       }
+    }
+  }
+
+  .more {
+    background-color: #242424;
+    text-align: center;
+    position: relative;
+    color: white;
+    padding: 30px 0px;
+    .stick {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 450px;
+      height: 5px;
+      background-color: white;
+    }
+    .text {
+      display: inline-block;
+      font-size: 110%;
+      letter-spacing: 15px;
     }
   }
 }
