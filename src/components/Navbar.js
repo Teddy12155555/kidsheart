@@ -56,7 +56,7 @@ export default function Navbar(props) {
             <div className="dropdown-content">
               <a href="./evaluation">孩童評量</a>
               <a href="./teachers">優師培訓</a>
-              <a href="./working">課程探索</a>
+              <a href="./lesson">課程探索</a>
             </div>
           </div>
         </div>

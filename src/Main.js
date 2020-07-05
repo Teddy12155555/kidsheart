@@ -13,7 +13,11 @@ import Evaluation from "./components/Evaluation";
 import Courses from "./components/Courses";
 import StillWorking from "./components/StillWorking";
 import Brand from "./components/Brand";
+import Lesson from "./components/Lesson";
+import Record from "./components/Record";
 import "./main.scss";
+import "./scss/global.scss";
+import "./scss/buttons.scss";
 
 function Main() {
   return (
@@ -27,7 +31,10 @@ function Main() {
         <Route path="/evaluation" component={Evaluation} />
         <Route path="/courses" component={Courses} />
         <Route path="/brand" component={Brand} />
+        <Route path="/lesson" component={Lesson} />
+        <Route path="/record" component={Record} />
         <Route path="/working" component={StillWorking} />
+
         <Redirect exact from="/" to="/home" />
       </Switch>
       <Footer />
