@@ -157,34 +157,38 @@ class SubContainer extends React.Component {
       >
         {this.props.cat_subs.map((v, i) => {
           return (
-            <div
-              key={i}
-              className="sub-cover"
-              onMouseDown={(e) => {
-                this.click_on_sub = i;
-                this.click_pos = { x: e.pageX, y: e.pageY };
-              }}
-              onMouseMove={(e) => {
-                if (
-                  this.click_on_sub != null &&
-                  (e.pageX - this.click_pos.x) ** 2 +
-                    (e.pageY - this.click_pos.y) ** 2 >
-                    900
-                ) {
-                  this.click_on_sub = null;
-                }
-              }}
-              onMouseUp={(e) => {
-                if (this.click_on_sub == i) {
-                  this.props.browse_sub(i);
-                }
-                this.click_on_sub = null;
-              }}
-            >
+            <div key={i} className="sub-cover">
               <div className="title">{v.title}</div>
-              {v.coverSrc.map((iv, ii) => {
-                return <img key={ii} src={`${this.recordDir}${iv}`}></img>;
-              })}
+              <div className="img-container">
+                {v.coverSrc.map((iv, ii) => {
+                  return <img key={ii} src={`${this.recordDir}${iv}`}></img>;
+                })}
+              </div>
+              <div
+                className="view-more"
+                onMouseDown={(e) => {
+                  this.click_on_sub = i;
+                  this.click_pos = { x: e.pageX, y: e.pageY };
+                }}
+                onMouseMove={(e) => {
+                  if (
+                    this.click_on_sub != null &&
+                    (e.pageX - this.click_pos.x) ** 2 +
+                      (e.pageY - this.click_pos.y) ** 2 >
+                      900
+                  ) {
+                    this.click_on_sub = null;
+                  }
+                }}
+                onMouseUp={(e) => {
+                  if (this.click_on_sub == i) {
+                    this.props.browse_sub(i);
+                  }
+                  this.click_on_sub = null;
+                }}
+              >
+                <span>點選看全部</span>
+              </div>
             </div>
           );
         })}
