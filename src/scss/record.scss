@@ -59,6 +59,7 @@ $container_bg_color: #242424;
     .browser {
       // position: fixed;
       position: absolute;
+      z-index: 1;
       left: 0;
       top: 0;
       width: 100%;
@@ -124,13 +125,14 @@ $container_bg_color: #242424;
       white-space: nowrap;
 
       .sub-cover {
+        position: relative;
         width: 270px;
         height: 650px;
         display: inline-block;
         background-color: #333333;
         overflow: hidden;
         margin: 0px 20px;
-        > .title {
+        .title {
           width: 100%;
           box-sizing: border-box;
           text-align: center;
@@ -140,9 +142,39 @@ $container_bg_color: #242424;
           padding: 20px 0px;
           color: #46433c;
         }
-        > img {
-          max-width: 100%;
-          display: block;
+        > .view-more {
+          opacity: 0;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          background-color: #00000061;
+          transition: opacity 0.5s ease 0s;
+          > span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            writing-mode: vertical-lr;
+            font-weight: 300;
+            font-size: 110%;
+            letter-spacing: 19px;
+            cursor: pointer;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .img-container {
+          position: relative;
+
+          > img {
+            max-width: 100%;
+            display: block;
+          }
         }
       }
     }
