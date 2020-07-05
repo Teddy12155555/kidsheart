@@ -41,7 +41,7 @@ export default function Navbar(props) {
               成果展示
             </button>
             <div class="dropdown-content">
-              <a href="./working">參與者回饋</a>
+              <a href="./record">參與者回饋</a>
               <a href="./working">著作 / 展示</a>
             </div>
           </div>

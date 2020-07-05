@@ -14,6 +14,7 @@ import Courses from "./components/Courses";
 import StillWorking from "./components/StillWorking";
 import Brand from "./components/Brand";
 import Lesson from "./components/Lesson";
+import Record from "./components/Record";
 import "./main.scss";
 
 function Main() {
@@ -29,7 +30,9 @@ function Main() {
         <Route path="/courses" component={Courses} />
         <Route path="/brand" component={Brand} />
         <Route path="/lesson" component={Lesson} />
+        <Route path="/record" component={Record} />
         <Route path="/working" component={StillWorking} />
+
         <Redirect exact from="/" to="/home" />
       </Switch>
       <Footer />

@@ -1,0 +1,49 @@
+.record {
+  width: 100%;
+  position: relative;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 7px;
+  color: white;
+  .category-container {
+    width: 100%;
+    padding: 50px 30px;
+    background-color: #242424;
+    border-top: 7px solid #abc3d1;
+    box-sizing: border-box;
+    > .title {
+      width: 100%;
+      font-size: 130%;
+      text-align: left;
+      padding-left: 50px;
+    }
+
+    .sub-container {
+      margin-top: 25px;
+      overflow: hidden;
+      white-space: nowrap;
+      .sub-cover {
+        width: 270px;
+        height: 650px;
+        display: inline-block;
+        background-color: #333333;
+        overflow: hidden;
+        margin: 0px 20px;
+        > .title {
+          width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          background-color: #e8ddcc;
+          outline: 2px solid #46433c;
+          outline-offset: -9px;
+          padding: 20px 0px;
+          color: #46433c;
+        }
+        > img {
+          max-width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
