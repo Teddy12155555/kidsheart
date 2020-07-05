@@ -1,15 +1,154 @@
 .evaluation {
-  > .form-info {
-    height: 100%;
-    background-color: red;
-    > button {
-      border-radius: 20px;
-      width: 100px;
-      height: 30px;
-      outline: none;
+  // index 0
+  > .index-0 {
+    > .slide-container {
+      position: relative;
+      float: left;
+      width: 100%;
+      z-index: 0;
+      .each-slide {
+        > img.photo {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      .indicators {
+        position: absolute;
+        width: 100%;
+        bottom: 200px;
+        margin: 0;
+        > div {
+          margin-bottom: 0px;
+          background-color: #f9f9f9 !important;
+          padding: 5px;
+        }
+        > .active {
+          background-color: #ff7878 !important;
+          padding: 5px;
+        }
+      }
+    }
+    > .text-img {
+      z-index: 1;
+      text-align: center;
+      padding-bottom: 150px;
+      transform: scale(0.8) translate(0, -150px);
+      > img {
+        max-width: 100%;
+      }
+    }
+    > .middle-img {
+      text-align: center;
+      position: relative;
+      .image1 {
+        max-width: 100%;
+        z-index: 0;
+      }
+    }
+
+    > .bg-field {
+      background-image: url("/assets/Image/Evaluation/bg-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-height: 100%;
+      > .squre-img {
+        > .image2 {
+          max-width: 100%;
+        }
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        transform: scale(0.7);
+      }
+      .form-info {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        .block {
+          display: block;
+        }
+        input {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border: solid;
+          border-color: #236d7a;
+          border-radius: 100px;
+          height: 50px;
+          width: 250px;
+          outline: none;
+          font-size: 1.6rem;
+          text-align: center;
+        }
+        select {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border: solid;
+          border-color: #236d7a;
+          border-radius: 100px;
+          height: 50px;
+          width: 250px;
+          outline: none;
+          font-size: 1.6rem;
+        }
+        option {
+          background-color: white;
+          font-size: 1.2rem;
+        }
+        msg {
+          color: #236d7a;
+          font-size: 1.7rem;
+          font-weight: bold;
+          letter-spacing: 3px;
+          padding-left: 25px;
+        }
+        .info-cell {
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+        > .flex-left {
+          flex: 0 0 30%;
+          justify-content: center;
+          //text-align: center;
+
+          > .parent-name {
+          }
+        }
+        > .flex-right {
+          flex: 0 0 30%;
+          justify-content: center;
+          //text-align: center;
+          .submit {
+            > button {
+              //margin-top: 10px;
+              margin-bottom: 10px;
+              border: solid;
+              border-color: #236d7a;
+              color: #236d7a;
+              background-color: white;
+              border-radius: 100px;
+              height: 50px;
+              width: 200px;
+              outline: none;
+              font-size: 1.6rem;
+              text-align: center;
+              &:hover {
+                cursor: pointer;
+                background-color: #236d7a;
+                color: white;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
+  // index 1
   > .question-container {
     background-image: url("/assets/Image/Evaluation/bg-2.png");
     background-repeat: no-repeat;
@@ -126,12 +265,131 @@
       display: none;
     }
   }
-
+  // index 2
   > .result-container {
     background-image: url("/assets/Image/Evaluation/bg-2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 1736px;
+    //height: 1736px;
+    width: 100%;
+    position: relative;
+    > .toy-container {
+      position: relative;
+      .toy-image {
+        max-width: 100%;
+      }
+
+      .toy-info {
+        position: absolute;
+        right: 10%;
+        top: 10%;
+        $title-width: 250px;
+        > .title {
+          width: $title-width + 15px;
+          margin-bottom: 30px;
+          border: solid;
+          border-radius: 100px;
+          border-color: #236d7a;
+          border-width: 10px;
+          position: relative;
+          a {
+            font-size: 20pt;
+            color: white;
+            text-align: center;
+            background-color: #236d7a;
+            display: block;
+            width: $title-width;
+            border-radius: 100px;
+            border: solid;
+            border-color: white;
+            padding: 5px;
+          }
+        }
+        > .info {
+          font-size: 20pt;
+          > a {
+            white-space: pre-line;
+            //margin: 100px;
+          }
+          > .info-btn {
+            margin-top: 30px;
+            text-align: center;
+            > a {
+              display: inline-block;
+              margin-right: 20px;
+              text-decoration: none;
+              border: solid;
+              color: white;
+              width: 200px;
+              padding: 10px;
+              &:hover {
+                cursor: pointer;
+                background-color: rgb(70, 67, 61);
+                border-color: rgb(70, 67, 61);
+              }
+            }
+          }
+        }
+      }
+    }
+    .recommand {
+      margin-top: 100px;
+      text-align: center;
+      $title-width: 250px;
+      > .title {
+        width: $title-width + 15px;
+        display: inline-block;
+        border: solid;
+        border-radius: 100px;
+        border-color: #236d7a;
+        border-width: 10px;
+        a {
+          font-size: 15pt;
+          color: white;
+          text-align: center;
+          background-color: #236d7a;
+          display: block;
+          width: $title-width;
+          border-radius: 100px;
+          border: solid;
+          border-color: white;
+          padding: 5px;
+        }
+      }
+    }
+
+    .toy-slogan {
+      margin-top: 100px;
+      position: relative;
+      > img {
+        max-width: 100%;
+      }
+      > .slogan-btn {
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        text-align: center;
+        > a {
+          display: inline-block;
+          width: 200px;
+          text-decoration: none;
+          border: solid;
+          margin: 10px;
+          margin-left: 100px;
+          margin-right: 100px;
+          padding: 10px;
+          color: white;
+          font-size: 20pt;
+          border-radius: 100px;
+          &:hover {
+            cursor: pointer;
+            background-color: #236d7a;
+          }
+        }
+      }
+    }
   }
 }
