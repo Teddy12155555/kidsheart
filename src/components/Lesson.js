@@ -127,7 +127,7 @@ export default class Lesson extends React.Component {
             {this.lesson_links.map((v, i) => {
               return (
                 <div
-                  className="button"
+                  className="button_white_opa_hover"
                   onClick={() => {
                     window.location.href = v.url;
                   }}
@@ -143,7 +143,7 @@ export default class Lesson extends React.Component {
           {this.sections.map((v, i) => {
             return (
               <div
-                className="button"
+                className="button_white_opa_hover"
                 onClick={() => {
                   document
                     .getElementById(`section_${i}`)
