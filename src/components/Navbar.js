@@ -67,7 +67,7 @@ export default function Navbar(props) {
               <i className="fa fa-caret-down"></i>
               關於我們
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a href="./brand">品牌故事</a>
               <a href="./contact">聯絡方式</a>
             </div>
