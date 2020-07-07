@@ -7,7 +7,6 @@ export default class Lesson extends React.Component {
     super(props);
     this.properties = {
       indicators: false,
-      // duration: 1000,
       transitionDuration: 300,
       autoplay: false,
       infinite: true,
@@ -89,7 +88,6 @@ export default class Lesson extends React.Component {
             })}
           </div>
         </div>
-
         <div className="hybrid-container">
           <div className="background-img-container">
             <img src="/assets/Image/Lesson/bg2.png"></img>
@@ -379,8 +377,6 @@ export default class Lesson extends React.Component {
             </div>
           </div>
         </div>
-
-        {/* <img src="/assets/Image/Lesson/bg7.png"></img> */}
       </div>
     );
   }
