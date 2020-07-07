@@ -42,7 +42,7 @@ export default function Navbar(props) {
             </button>
             <div className="dropdown-content">
               <a href="./record">參與者回饋</a>
-              <a href="./working">著作 / 展示</a>
+              <a href="./demo">著作 / 展示</a>
             </div>
           </div>
         </div>
