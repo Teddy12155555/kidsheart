@@ -15,6 +15,7 @@ import StillWorking from "./components/StillWorking";
 import Brand from "./components/Brand";
 import Lesson from "./components/Lesson";
 import Record from "./components/Record";
+import Demo from "./components/Demo";
 import "./main.scss";
 import "./scss/global.scss";
 import "./scss/buttons.scss";
@@ -33,6 +34,7 @@ function Main() {
         <Route path="/brand" component={Brand} />
         <Route path="/lesson" component={Lesson} />
         <Route path="/record" component={Record} />
+        <Route path="/demo" component={Demo} />
         <Route path="/working" component={StillWorking} />
 
         <Redirect exact from="/" to="/home" />
