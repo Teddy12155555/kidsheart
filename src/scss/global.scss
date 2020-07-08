@@ -6,3 +6,24 @@
   border-width: 8px;
   border-color: black;
 }
+
+.page-title {
+  position: relative;
+  display: inline-block;
+  border: solid;
+  border-radius: 100px;
+  border-color: #236d7a;
+  border-width: 10px;
+  > span:first-of-type {
+    font-size: 130%;
+    letter-spacing: 10px;
+    color: white;
+    text-align: center;
+    background-color: #236d7a;
+    display: block;
+    border-radius: 100px;
+    border: solid;
+    border-color: white;
+    padding: 5px 60px;
+  }
+}

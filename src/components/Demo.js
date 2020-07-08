@@ -86,6 +86,12 @@ export default class Lesson extends React.Component {
             // opacity: "0.7",
           }}
         ></img>
+        <div className="page-title-container">
+          <div className="page-title">
+            <span>作品展示</span>
+          </div>
+        </div>
+
         <div className="item-container">
           {this.pieces.map((v, i) => {
             return (
@@ -105,7 +111,6 @@ export default class Lesson extends React.Component {
             );
           })}
         </div>
-
         {this.state.viewing != null ? (
           <div className="view-container" onClick={this.EndView}>
             <div className="vid-holder">

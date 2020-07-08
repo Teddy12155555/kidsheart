@@ -5,7 +5,11 @@ $exit-button-size: 25px;
   position: relative;
   font-size: 25px;
   overflow: hidden;
-
+  .page-title-container {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+  }
   .spacing-16-9 {
     position: relative;
     width: 100%;
@@ -19,7 +23,7 @@ $exit-button-size: 25px;
     // left: 0;
     // top: 0;
     text-align: center;
-    padding: 120px 30px;
+    padding: 0 30px;
     box-sizing: border-box;
     .item {
       width: 370px;
