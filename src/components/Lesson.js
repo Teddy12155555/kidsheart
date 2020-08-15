@@ -26,7 +26,7 @@ export default class Lesson extends React.Component {
     this.lesson_links = [
       {
         name: "線上專人諮詢",
-        url: "/working",
+        url: "/contact",
       },
       {
         name: "最新開課資訊",
@@ -37,19 +37,15 @@ export default class Lesson extends React.Component {
     this.sections = [
       {
         name: "感覺統合",
-        height: "855px",
       },
       {
         name: "語言理解課程",
-        height: "5700px",
       },
       {
         name: "樂高機器人",
-        height: "7900px",
       },
       {
         name: "情緒行為課程",
-        height: "9500px",
       },
     ];
 
@@ -92,52 +88,17 @@ export default class Lesson extends React.Component {
           <div className="background-img-container">
             <img src="/assets/Image/Lesson/bg2.png"></img>
             <img src="/assets/Image/Lesson/bg3.png"></img>
-            <div
-              className="yield"
-              style={{
-                height: "700px",
-              }}
-            ></div>
+            <img src="/assets/Image/Lesson/bg4.png"></img>
             <img src="/assets/Image/Lesson/bg5.png"></img>
             <img src="/assets/Image/Lesson/bg6.png"></img>
-            <div
-              className="yield"
-              style={{
-                height: "760px",
-              }}
-            ></div>
-            <div
-              className="yield"
-              style={{
-                height: "760px",
-              }}
-            ></div>
-            <div
-              className="yield"
-              style={{
-                height: "760px",
-              }}
-            ></div>
-            <div
-              className="yield"
-              style={{
-                height: "760px",
-              }}
-            ></div>
-            <div
-              className="yield"
-              style={{
-                height: "760px",
-              }}
-            ></div>
-            <div
-              className="yield"
-              style={{
-                height: "760px",
-              }}
-            ></div>
+            <img src="/assets/Image/Lesson/bg7.png"></img>
+            <img src="/assets/Image/Lesson/bg8.png"></img>
+            <img src="/assets/Image/Lesson/bg9.png"></img>
+            <img src="/assets/Image/Lesson/bg10.png"></img>
+            <img src="/assets/Image/Lesson/bg11.png"></img>
+            <img src="/assets/Image/Lesson/bg12.png"></img>
             <img
-              src="/assets/Image/Lesson/bg8.png"
+              src="/assets/Image/Lesson/bg13.png"
               style={{
                 marginTop: "-700px",
               }}
@@ -147,6 +108,7 @@ export default class Lesson extends React.Component {
           <div className="background-container">
             <div></div>
           </div>
+
           <div className="content-container">
             {this.SectionTitle(0)}
             <div className="content-block">
@@ -347,7 +309,10 @@ export default class Lesson extends React.Component {
             </div>
             <div className="content-block full">
               <div className="general-container">
-                <div className="yield" style={{ height: "700px" }}></div>
+                <img
+                  src="/assets/Image/Lesson/lesson_5.png"
+                  style={{ width: "100%" }}
+                ></img>
                 <div id="slogan_2">
                   {
                     "理解可能的原因造成情緒來源\n較能找出幫助幼兒減緩情緒行為的方法哦~"

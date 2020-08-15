@@ -382,12 +382,7 @@ export default class Record extends React.Component {
     return (
       <div className="record">
         <div className="banner">
-          <img
-            className="yield"
-            style={{
-              width: "900px",
-            }}
-          ></img>
+          <img src="/assets/Image/Record/ban1.png"></img>
           <img src="/assets/Image/Record/ban2.png"></img>
           <div className="links">
             {this.pageData.map((v, i) => {

@@ -3,9 +3,9 @@ import { Slide } from "react-slideshow-image";
 import "../scss/homepage.scss";
 
 const slideImages = [
-  "/assets/Image/slider0.jpg",
-  "/assets/Image/slider1.jpg",
-  "/assets/Image/slider2.jpg",
+  "/assets/Image/Home/Slides/slider0.jpg",
+  "/assets/Image/Home/Slides/slider1.jpg",
+  "/assets/Image/Home/Slides/slider2.jpg",
 ];
 
 const properties = {

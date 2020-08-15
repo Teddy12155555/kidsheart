@@ -345,7 +345,7 @@ export default function Teachers(props) {
         <img src="/assets/Image/Teachers/teacher-detail.png"></img>
         <div className="links-container">
           <div className="detail-links">
-            <a href="./working" className="link">
+            <a href="./contact" className="link">
               線上專人諮詢
             </a>
             <a href="./working" className="link">

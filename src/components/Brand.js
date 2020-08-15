@@ -47,7 +47,7 @@ export default class Brand extends React.Component {
       },
       {
         name: "玩具評測",
-        url: "/working",
+        url: "/evaluation",
       },
       {
         name: "其他平台",

@@ -1,7 +1,7 @@
 $SlideHeight: 100px;
 
 .homePage {
-  background-image: url("/assets/Image/homepage_bg.png");
+  background-image: url("/assets/Image/Home/homepage_bg.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -19,6 +19,23 @@ $SlideHeight: 100px;
     border: solid;
     border-width: 5px;
     border-color: rgb(117, 115, 110);
+
+    & > div:first-of-type {
+      position: relative;
+      padding-top: 56.25%;
+    }
+    .react-slideshow-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      .react-slideshow-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+    }
 
     .each-slide {
       > img.photo {
