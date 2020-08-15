@@ -22,17 +22,17 @@ export default class Brand extends React.Component {
     this.videos = [
       {
         name: "負 責 人 介 紹",
-        url: "https://www.youtube.com/embed/f3zb1rRmEik",
+        url: "https://www.youtube.com/embed/VaEIUoqsEaY",
       },
       {
         name: "孩 子 學 習 需 面 臨 問 題",
-        url: "https://www.youtube.com/embed/glB1uwvuskg",
+        url: "https://www.youtube.com/embed/BNmkLoMcXIk",
       },
-      { name: "專 注 力", url: "https://www.youtube.com/embed/glB1uwvuskg" },
-      { name: "觀 察 孩 童", url: "https://www.youtube.com/embed/glB1uwvuskg" },
+      { name: "專 注 力", url: "https://www.youtube.com/embed/dOzFcm0hdzQ" },
+      { name: "觀 察 孩 童", url: "https://www.youtube.com/embed/te6BpZgO0aw" },
       {
         name: "幼 兒 學 習 區 規 畫 建 議",
-        url: "https://www.youtube.com/embed/glB1uwvuskg",
+        url: "https://www.youtube.com/embed/nJfBeZbs3AA",
       },
     ];
 
