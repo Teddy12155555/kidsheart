@@ -114,26 +114,26 @@ export default class Lesson extends React.Component {
             <div className="content-block">
               <div className="title">什麼是感覺統合?</div>
               <div className="text">
-                {
-                  "感覺統合的概念是由職能治療師--愛爾絲博士(Dr.Ayres)所提出，並將感覺統合定義為「組織來自身體及環境之感覺的過程，使得身體能在環境中有效率的運用」。\n感覺包括觸覺、感知搖晃的感覺(前庭覺)、覺察身體各部位的感覺(本體覺)、視覺、聽覺、嗅覺、及味覺，接受器接受到訊息後會傳送到大腦，大腦會整合、解釋來自身體與環境的感覺刺激訊息，並跟據得到的訊息，策畫相對應的行為。"
-                }
+                {"感覺統合的概念是由職能治療師--愛爾絲博士(Dr.Ayres)所提出，並將感覺統合定義為「組織來自身體及環境之感覺的過程，使得身體能在環境中有效率的運用」。\n" +
+                  "感覺包括觸覺、感知搖晃的感覺(前庭覺)、覺察身體各部位的感覺(本體覺)、視覺、聽覺、嗅覺、及味覺，接受器接受到訊息後會傳送到大腦，大腦會整合、解釋來自身體與環境的感覺刺激訊息，並跟據得到的訊息，策畫相對應的行為。\n" +
+                  "感覺統合協助孩童認識自己、適應環境、調整學習力，是日後複雜學習 能力的重要基礎。感覺統合在日常的兒童遊戲活動過程中發展出來，並 呈現在動作計畫能力上，大腦就像一個感覺處理機器，透過感官，吸收 大量資訊，藉由視覺、聽覺、動覺等各種感覺，幫助自己與周遭的人事 物互動，並震展出適當的行為。"}
               </div>
             </div>
-            <div className="content-block">
+            {/* <div className="content-block">
               <img
                 className="yield img"
                 style={{
                   height: "200px",
                 }}
               ></img>
-            </div>
-            <div className="content-block">
+            </div> */
+            /* <div className="content-block">
               <div className="text">
                 {
                   "感覺統合協助孩童認識自己、適應環境、調整學習力，是日後複雜學習 能力的重要基礎。感覺統合在日常的兒童遊戲活動過程中發展出來，並 呈現在動作計畫能力上，大腦就像一個感覺處理機器，透過感官，吸收 大量資訊，藉由視覺、聽覺、動覺等各種感覺，幫助自己與周遭的人事 物互動，並震展出適當的行為。"
                 }
               </div>
-            </div>
+            </div> */}
             <div className="content-block">
               <div className="title2">那些孩子需要感覺統合課程訓練?</div>
               <div className="text2">
@@ -172,14 +172,14 @@ export default class Lesson extends React.Component {
                 ></img>
               </div>
             </div>
-            <div className="content-block">
+            {/* <div className="content-block">
               <img
                 className="yield img"
                 style={{
                   height: "300px",
                 }}
               ></img>
-            </div>
+            </div> */}
             <div className="content-block full">
               <div className="general-container">
                 <img src="/assets/Image/Lesson/lesson_2.png"></img>
