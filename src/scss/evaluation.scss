@@ -165,17 +165,19 @@
       transform: translate(-50%, 0);
       position: relative;
       display: flex;
+
       > .question-title {
-        position: absolute;
-        display: flex;
+        position: relative;
+        //display: flex;
         color: rgb(56, 108, 120);
         font-size: 30px;
         font-weight: bolder;
         letter-spacing: 5px;
         -webkit-writing-mode: vertical-lr;
         writing-mode: vertical-lr;
-        top: 50%;
-        transform: translate(0, -50%);
+
+        transform: translate(0, 25%);
+        margin-right: 20px;
       }
       > .questions {
         width: 120%;
@@ -224,6 +226,9 @@
                   width: 10px;
                   width: 10px;
                 }
+              }
+              &:hover {
+                cursor: pointer;
               }
             }
           }

@@ -251,7 +251,7 @@ export default function Evaluation(props) {
     <div className="result-container">
       <div className="toy-container">
         <img
-          src={"/assets/Image/Evaluation/Toy/bg.png"}
+          src={"/assets/Image/Evaluation/Toy/" + TOY + ".png"}
           className="toy-image"
         ></img>
         <div className="toy-info">
