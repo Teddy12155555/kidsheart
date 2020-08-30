@@ -6,44 +6,44 @@ export default class Lesson extends React.Component {
     super(props);
     this.pieces = [
       {
-        author: "XXX",
+        author: "童心匯",
         name: "工作記憶",
-        video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
+        video: "https://www.youtube.com/watch?v=NqBMdUgAJ0s",
       },
       {
-        author: "XXX",
+        author: "童心匯",
         name: "前庭覺刺激",
-        video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
+        video: "https://www.youtube.com/watch?v=JzWpQ-f6rcs",
       },
       {
-        author: "XXX",
+        author: "童心匯",
         name: "觸覺系統",
-        video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
+        video: "https://www.youtube.com/watch?v=T2I0v2gZenU",
       },
       {
-        author: "XXX",
+        author: "童心匯",
         name: "本體覺刺激",
-        video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
+        video: "https://www.youtube.com/watch?v=Ph4qrl17zF4",
       },
       {
-        author: "XXX",
+        author: "童心匯",
         name: "邏輯拼圖",
         video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
       },
       {
-        author: "XXX",
+        author: "童心匯",
         name: "手眼協調",
-        video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
+        video: "https://www.youtube.com/watch?v=Yb80K5H5ttY",
       },
       {
-        author: "XXX",
+        author: "童心匯",
         name: "視覺認知",
-        video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
+        video: "https://www.youtube.com/watch?v=Hr4KqJAPGjQ",
       },
       {
-        author: "XXX",
+        author: "童心匯",
         name: "注意力",
-        video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
+        video: "https://www.youtube.com/watch?v=mhSFJGXW3Hc",
       },
     ];
     this.state = {
@@ -57,8 +57,17 @@ export default class Lesson extends React.Component {
   }
 
   GetIconUrl(video) {
-    let v_id = video.match(/v=([a-zA-Z0-9]+)$/)[1];
-    return `https://img.youtube.com/vi/${v_id}/maxresdefault.jpg`;
+    let v_id = video.match(/v=([a-zA-Z0-9\-]+)$/)[1];
+    return `https://img.youtube.com/vi/${v_id}/sddefault.jpg`;
+
+    //return `https://img.youtube.com/vi/${v_id}/maxresdefault.jpg`;
+
+    //return `https://img.youtube.com/vi/${v_id}/hqdefault.jpg`;
+  }
+  GetEmbedUrl(v_url) {
+    let v_id = v_url.match(/v=([a-zA-Z0-9\-]+)$/)[1];
+
+    return "https://www.youtube.com/embed/" + v_id.toString();
   }
 
   StartView(url) {
@@ -119,10 +128,10 @@ export default class Lesson extends React.Component {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/81mGCwdpe8k"
+                src={this.GetEmbedUrl(this.state.viewing)}
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
           </div>
