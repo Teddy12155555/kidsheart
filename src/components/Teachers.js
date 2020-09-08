@@ -113,15 +113,29 @@ export default function Teachers(props) {
                   <br />
                   <msg>桃園生藍迪機構專聘任職能治療師</msg>
                   <br />
-                  <msg>桃園生大崗國小、文欣幼兒園特聘特殊教育研習講師</msg>
+                  <msg>桃園市國小、幼兒園特聘特殊教育研習講師</msg>
                   <br />
                   <lastmsg>宏仁醫院職能治療師</lastmsg>
                 </div>
                 <div className="resume-cell">
                   <msgtitle>專長：</msgtitle>
-                  <firstmsg>國立清華大學學前特殊教育學位學程碩士</firstmsg>
+                  <firstmsg>0-6歲幼兒感覺統合訓練及課程研發</firstmsg>
                   <br />
-                  <lastmsg>仁德醫護管理專科職能治療副學士</lastmsg>
+                  <msg>兒童情緒社交訓練</msg>
+                  <br />
+                  <msg>兒童專注力訓練</msg>
+                  <br />
+                  <msg>兒童大腦認知能力訓練</msg>
+                  <br />
+                  <msg>兒童手部功能訓練</msg>
+                  <br />
+                  <msg>兒童精細動作書寫訓練</msg>
+                  <br />
+                  <msg>兒童視知覺訓練</msg>
+                  <br />
+                  <msg>兒童發展評估</msg>
+                  <br />
+                  <lastmsg>親職溝通與親職教育</lastmsg>
                 </div>
               </div>
             </div>
@@ -148,21 +162,23 @@ export default function Teachers(props) {
                   <msgtitle>經歷：</msgtitle>
                   <firstmsg>私立幼兒園、托嬰中心行政主管</firstmsg>
                   <br />
-                  <msg>幼兒美語教室、音樂律動教師</msg>
+                  <msg>幼兒美語教師、音樂律動教師</msg>
                   <br />
                   <msg>幼教領域十五年工作經驗</msg>
                   <br />
                   <lastmsg>合格保母證照</lastmsg>
                 </div>
                 <div className="resume-cell">
-                  <msgtitle>專業培訓：</msgtitle>
+                  <msgtitle>專業</msgtitle>
+                  <br />
+                  <msgtitle>培訓：</msgtitle>
                   <firstmsg>兒少福利機構主管人員專業培訓結業</firstmsg>
                   <br />
                   <msg>華德福幼教師資培訓結業</msg>
                   <br />
                   <msg>兒童美語師資培訓結業</msg>
                   <br />
-                  <lastmsg>奧福音樂培訓結業</lastmsg>
+                  <lastmsg>奧福音樂教師培訓結業</lastmsg>
                 </div>
               </div>
             </div>
@@ -181,25 +197,19 @@ export default function Teachers(props) {
               <div className="resume-container">
                 <div className="resume-cell">
                   <msgtitle>學歷：</msgtitle>
-                  <firstmsg>私立宏光科技大學物理治療系 畢業</firstmsg>
+                  <firstmsg>私立弘光科技大學物理治療系 畢業</firstmsg>
                   <br />
-                  <lastmsg>國立清華大學學前特教研究所 碩一</lastmsg>
+                  <lastmsg>國立清華大學學前特教研究所</lastmsg>
                 </div>
                 <div className="resume-cell">
                   <msgtitle>經歷：</msgtitle>
                   <firstmsg>骨科診所物理治療人員</firstmsg>
                   <br />
-                  <msg>新竹市兒童發展中心</msg>
+                  <msg>新竹市兒童發展中心早期療育教師/巡迴輔導教師</msg>
                   <br />
-                  <msg>新北市晨曦發展中心</msg>
+                  <msg>新竹市晨曦發展中心到宅/到園早期療育教師</msg>
                   <br />
                   <msg>新竹縣華光基金會</msg>
-                  <br />
-                  <msg>早療教師/巡迴輔導教師</msg>
-                  <br />
-                  <msg>到宅及到園療癒教師</msg>
-                  <br />
-                  <msg>偏鄉到宅療癒教師</msg>
                   <br />
                   <lastmsg>私立道禾小學暨幼兒園 特教教師</lastmsg>
                 </div>
@@ -223,22 +233,42 @@ export default function Teachers(props) {
                   <firstmsg>學前特教老師</firstmsg>
                 </div>
                 <div className="resume-cell">
-                  <msgtitle>經歷：</msgtitle>
-                  <firstmsg>私立幼兒園、托嬰中心行政主管</firstmsg>
+                  <msgtitle>學歷：</msgtitle>
+                  <firstmsg>國立新竹教育大學 特殊教育學系</firstmsg>
                   <br />
-                  <msg>幼兒美語教室、音樂律動教師</msg>
-                  <br />
-                  <msg>幼教領域十五年工作經驗</msg>
-                  <br />
-                  <lastmsg>合格保母證照</lastmsg>
+                  <lastmsg>國立清華大學 學前特殊教育碩士在職學位學程</lastmsg>
                 </div>
                 <div className="resume-cell">
                   <msgtitle>經歷：</msgtitle>
-                  <firstmsg>新竹市智障福利協進會暑期守護</firstmsg>
+                  <firstmsg>新竹聯電聖心課輔中心  課輔老師</firstmsg>
                   <br />
-                  <msg>希望種子成長營 特教老師</msg>
+                  <msg>新竹市智障福利協進會暑期種子營  特教老師</msg>
                   <br />
-                  <lastmsg>聯電聖心課輔中心 課輔老師</lastmsg>
+                  <msg>新竹市國小附設幼兒園親職教育與特教講座 講師</msg>
+                  <br />
+                  <msg>新竹市幼教教保人員「特殊教育」主題研習 講師</msg>
+                  <br />
+                  <msg>教育部國教署「注意力缺陷過動症(ADHD)知能推廣研習」</msg>
+                  <br />
+                  <msg>學前組講師</msg>
+                  <br />
+                  <lastmsg>新竹市特殊教育鑑定安置 初階心評人員</lastmsg>
+                </div>
+                <div className="resume-cell">
+                  <msgtitle>專業</msgtitle>
+                  <br />
+                  <msgtitle>培訓：</msgtitle>
+                  <firstmsg>特殊教育學校(班) 國民小學身心障礙組教師證書</firstmsg>
+                  <br />
+                  <msg>特殊教育學校(班) 學前身心障礙組教師證書</msg>
+                  <br />
+                  <msg>國立新竹教育大學 潛能開發學分學程修業證書</msg>
+                  <br />
+                  <msg>新竹市補救教學師資培訓結業</msg>
+                  <br />
+                  <msg>教育部國教署「注意力缺陷過動症(ADHD)知能推廣研習」</msg>
+                  <br />
+                  <lastmsg>學前種子教師</lastmsg>
                 </div>
               </div>
             </div>
@@ -288,7 +318,7 @@ export default function Teachers(props) {
           <div className="teaching-philo">
             <div pos="l">培 訓 理 念</div>
             <div pos="r">
-              因應早療黃金期的重要性，以及早期療教育人員的短缺，期望透過專業培訓和教師智能檢定，培訓出願意投入特殊教育工作的夥伴們。
+              因應早療黃金期的重要性，以及早期療教育人員的短缺，期望透過專業培訓和教師知能檢定，培訓出願意投入特殊教育工作的夥伴們。
             </div>
           </div>
           <img src="/assets/Image/Teachers/teacher-structure.png" />

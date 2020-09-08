@@ -52,8 +52,8 @@ $tch_philo_bord_rad: 70px;
           $name-field: 120px;
           $dashed-border: 3px;
           $creater-fix: 10px;
-          padding-top: 125px;
-          padding-bottom: 125px;
+          padding-top: 90px;
+          padding-bottom: 90px;
           //padding-left: 200px;
           &::after {
             content: "";
@@ -175,7 +175,7 @@ $tch_philo_bord_rad: 70px;
             width: 800px;
             //width: calc(100% - #{$squre-unit + 2 * $squre-border + $dashed-border});
             .resume-cell {
-              padding-top: 30px;
+              padding-top: 20px;
               padding-left: 10px;
               padding-bottom: 20px;
               font-size: 15pt;
