@@ -28,7 +28,7 @@ export default class Lesson extends React.Component {
       {
         author: "童心匯",
         name: "邏輯拼圖",
-        video: "https://www.youtube.com/watch?v=81mGCwdpe8k",
+        video: "https://www.youtube.com/watch?v=4FryltljGyg",
       },
       {
         author: "童心匯",
